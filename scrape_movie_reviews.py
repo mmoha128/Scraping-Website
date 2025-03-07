@@ -11,34 +11,63 @@ def extract_rating_123telugu(soup):
     return None
 
 def extract_rating_greatandhra(soup):
-    rating_tag = soup.find('div', class_='entry-content')
-    print(rating_tag)
+    # Step 1: Find the <span> tag with style="color: #ff0000;"
+    rating_tag = soup.find('span', style='color: #ff0000;')
+    
     if rating_tag:
-        return rating_tag.text.strip().replace("Telugu360 Rating:", "")
+        # Step 2: Extract and clean the rating
+        rating_text = rating_tag.text.strip()
+        return rating_text.split("/")[0]  # Extract only the number (e.g., 2.5)
+    
+    # Return None if no rating is found
     return None
 
 def extract_rating_telugu360(soup):
-    rating_tag = soup.find('strong', string=lambda x: x and 'Rating:' in x)
+    # Step 1: Find the <strong> tag containing "Telugu360 Rating:"
+    rating_tag = soup.find('strong', string=lambda x: x and 'Telugu360 Rating:' in x)
+    
     if rating_tag:
-        return rating_tag.text.strip().replace("Rating: ", "")
+        # Step 2: Extract and clean the rating
+        rating = rating_tag.text.strip().replace("Telugu360 Rating:", "").strip()
+        return rating
+    
+    # Return None if no rating is found
     return None
 
 def extract_rating_m9(soup):
-    rating_tag = soup.find('span', style='font-weight: bold;')
+    # Step 1: Find the <span> tag with the specified style
+    rating_tag = soup.find('span', style='font-size: 22px; font-weight: bolder; color: #f00;')
+    
     if rating_tag:
-        return rating_tag.text.strip().replace("Rating: ", "").split(" ")[0]
+        # Step 2: Extract and clean the rating
+        rating_text = rating_tag.text.strip()
+        return rating_text.split("/")[0]  # Extract only the number (e.g., 2.75)
+    
+    # Return None if no rating is found
     return None
 
 def extract_rating_gulte(soup):
-    rating_tag = soup.find('font', color='#ff0000')
+    # Step 1: Find the <strong> tag containing "Rating:"
+    rating_tag = soup.find('strong', string=lambda x: x and 'Rating:' in x)
+    
     if rating_tag:
-        return rating_tag.find_next_sibling(text=True).strip()
+        # Step 2: Extract and clean the rating
+        rating_text = rating_tag.text.strip().replace("Rating: ", "")
+        return rating_text.split("/")[0]  # Extract only the number (e.g., 2.75)
+    
+    # Return None if no rating is found
     return None
 
 def extract_rating_tupaki(soup):
-    rating_tag = soup.find('span', style='font-size: 22px; font-weight: bolder; color: #f00;')
+    # Step 1: Find the <font> tag with color="#ff0000"
+    rating_tag = soup.find('font', color='#ff0000')
+    
     if rating_tag:
-        return rating_tag.text.strip()
+        # Step 2: Extract the sibling text after the <font> tag
+        rating_text = rating_tag.find_next_sibling(string=True).strip().strip('"')
+        return rating_text.split("/")[0]  # Extract only the number (e.g., 2)
+    
+    # Return None if no rating is found
     return None
 
 # Function to scrape a single website
@@ -55,10 +84,20 @@ def scrape_website(url):
         if '123telugu.com' in url:
             name_tag = soup.find('h1', class_='entry-title')
             if name_tag:
-                name = name_tag.text.strip().split(":")[0]
+                # Extract the text inside the <h1> tag
+                full_text = name_tag.text.strip()
+                
+                # Split the text to isolate the movie name
+                # Example: "Review: Aadhi Pinisetty's Sabdham - Caters to niche audiences"
+                if "Review:" in full_text:
+                    name = full_text.split("Review:")[1].split("-")[0].strip()
+                else:
+                    name = full_text  # Fallback if "Review:" is not found
             else:
                 name = "Unknown Movie"
-            print(name_tag)
+            
+            print(name)  # Debugging: Print the extracted movie name
+
         elif 'greatandhra.com' in url:
             name_tag = soup.find('h1', class_='entry-title')
             if name_tag:
@@ -66,33 +105,78 @@ def scrape_website(url):
             else:
                 name = "Unknown Movie"
             print(name_tag)
+        
         elif 'telugu360.com' in url:
-            name_tag = soup.find('h2')
+            name_tag = soup.find('h1', class_='post-title')
             if name_tag:
-                name = name_tag.text.strip()
+                # Extract the text inside the <h1> tag
+                full_text = name_tag.text.strip()
+                
+                # Split the text to isolate the movie name
+                # Example: "Game Changer Movie Review: A Superficial Political Drama!"
+                if "Movie Review:" in full_text:
+                    name = full_text.split("Movie Review:")[0].strip()
+                else:
+                    name = full_text  # Fallback if "Movie Review:" is not found
             else:
                 name = "Unknown Movie"
+            
+            print(name)  # Debugging: Print the extracted movie name
+        
         elif 'm9.news' in url:
-            name_tag = soup.find('span', class_='highlighted-red')
+            name_tag = soup.find('div', class_='single-page-title').find('h1')
             if name_tag:
-                name = name_tag.find_next_sibling(text=True).strip().split("–")[0].strip()
+                # Extract the text inside the <h1> tag
+                full_text = name_tag.text.strip()
+                
+                # Split the text to isolate the movie name
+                # Example: "Dragon Review: Packs Emotions, If Not Fire"
+                if "Review:" in full_text:
+                    name = full_text.split("Review:")[0].strip()
+                else:
+                    name = full_text  # Fallback if "Review:" is not found
             else:
                 name = "Unknown Movie"
+            
+            print(name)  # Debugging: Print the extracted movie name
+        
         elif 'gulte.com' in url:
-            name_tag = soup.find('td', class_='txt_inner_bold_green')
+            name_tag = soup.find('h1', class_='name post-title entry-title')
             if name_tag:
-                name = name_tag.text.strip().split(":")[1].strip().strip("'")
+                # Extract the text inside the <span> tag within the <h1> tag
+                span_tag = name_tag.find('span')
+                if span_tag:
+                    full_text = span_tag.text.strip()
+                    
+                    # Split the text to isolate the movie name
+                    # Example: "Thandel Movie Review"
+                    if "Movie Review" in full_text:
+                        name = full_text.split("Movie Review")[0].strip()
+                    else:
+                        name = full_text  # Fallback if "Movie Review" is not found
+                else:
+                    name = "Unknown Movie"
             else:
                 name = "Unknown Movie"
+            
+            print(name)  # Debugging: Print the extracted movie name
+
         elif 'tupaki.com' in url:
             name_tag = soup.find('h1')
             if name_tag:
-                name = name_tag.text.strip().split(":")[0]
+                # Extract the text inside the <h1> tag
+                full_text = name_tag.text.strip()
+                
+                # Split the text to isolate the movie name
+                # Example: "Dragon Review: Packs Emotions, If Not Fire"
+                if "Review:" in full_text:
+                    name = full_text.split("Review:")[0].strip()
+                else:
+                    name = full_text  # Fallback if "Review:" is not found
             else:
                 name = "Unknown Movie"
-        else:
-            name = "Unknown Movie"
-        
+            print(name)  # Debugging: Print the extracted movie name
+       
         # Extract rating based on website
         if '123telugu.com' in url:
             rating = extract_rating_123telugu(soup)
@@ -116,12 +200,12 @@ def scrape_website(url):
 
 # List of websites to scrape
 websites = [
-    "https://www.123telugu.com",
+    "https://www.123telugu.com/reviews/aadhi-pinisetty-sabdham-telugu-movie-review.html",
     "https://telugu.greatandhra.com/movies/reviews/return-of-the-dragon-movie-review.html",
-    "https://www.telugu360.com",
-    "https://www.m9.news",
-    "https://www.gulte.com",
-    "https://www.tupaki.com",
+    "https://www.telugu360.com/game-changer-movie-review/",
+    "https://www.m9.news/reviews/dragon-tamil-movie-review/",
+    "https://www.gulte.com/moviereviews/338661/thandel-movie-review",
+    "https://www.tupaki.com/movies-reviews/content-4529",
     "https://telugu.greatandhra.com/movies/reviews/daaku-maharaaj-movie-review.html"
 ]
 
