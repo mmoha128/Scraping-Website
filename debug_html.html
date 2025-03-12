@@ -1,0 +1,2013 @@
+<!DOCTYPE html>
+<html lang="en-US">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+   <link href="http://gmpg.org/xfn/11" rel="profile"/>
+   <link href="https://www.telugu360.com/xmlrpc.php" rel="pingback"/>
+   <link href="https://fonts.googleapis.com" rel="preconnect"/>
+   <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+   <!--      <link href="https://fonts.googleapis.com/css2?family=Ramabhadra&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Mallanna&display=swap" rel="stylesheet"> -->
+   <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" referrerpolicy="no-referrer" rel="stylesheet">
+    <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css" integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA==" referrerpolicy="no-referrer" rel="stylesheet">
+     <style type="text/css">
+      .web-stories-list__carousel {
+  display: flex;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch; 
+  cursor: grab; 
+}
+
+
+.web-stories-list__carousel > .story-item {
+  scroll-snap-align: start;
+  flex: 0 0 auto; 
+  width: 300px;
+  margin-right: 16px;
+ 
+}
+
+.web-stories-list__carousel.active {
+  cursor: grabbing;
+}
+
+
+
+
+.glider-track {display: flex;}  
+.carousel-1 {width: 100%;padding-top: 10px;padding-bottom: 20px;} 
+.web-stories-list__carousel {display: flex;overflow: hidden;} 
+.menu-list>ul>li>a{
+    line-height: 24px !important;
+}
+header.header-main {
+    padding: 10px 0 0 !important;
+}
+#search-container {
+    position: relative;
+}
+.mid-col-1 .category_link{
+width: 22%;
+}
+#search-icon {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+#search-bar {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 270px;
+    background: #fff;
+    border: 1px solid #ddd;
+    z-index: 1000;
+    padding: 11px;
+    border-radius: 5px;
+}
+#search-bar form div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+#search-bar form div input{
+    margin: 0;
+    height: 35px;
+}
+#search-bar form #searchsubmit{
+       background: #f69215;
+    border: 1px solid #f69215;
+    padding: 0 11px;
+    border-radius: 4px;
+    color: #fff;
+    font-weight: 500;
+    font-size: 15px;
+}
+#search-bar .search-field {
+    width: calc(100% - 50px); /* Adjust based on your design */
+}
+#search-bar .search-submit {
+    display: none;
+}
+#search-bar.hidden {
+    display: none;
+}
+.switch2_device{
+    display: none;
+}
+.header-top{
+        transition: position 0.3s, top 0.3s;
+}
+.web-stories-list.is-view-type-circles .web-stories-list__story-poster{
+    max-width: 100px;
+    max-height: 104px;
+}
+.web-stories-list.is-view-type-circles .web-stories-list__story{
+    max-width: 100px !important;
+    max-height: 128px;
+}
+.web-stories-list.is-view-type-circles .web-stories-list__story-poster a>img{
+    max-width: 100px !important;
+    max-height: 100px;
+}
+
+
+
+
+
+/*css 3d*/
+/* 3d rottaing box css*/
+
+.box-container {
+  width: 200px;
+  height: 90px;
+    display: flex; 
+  position: fixed;
+  left: 5%;
+  transform-style: preserve-3d;
+  perspective: 1200px;
+  bottom: 5%;
+  z-index: 999;
+}
+.box-container .container-inner {
+  width: 200px;
+  height: 90px;
+  position: relative;
+  transform-style: preserve-3d;
+  transform: translateZ(10px) rotateY(0deg);
+}
+.box-container .child {
+  width: 200px;
+  height: 90px;
+  position: absolute;
+  top: 0px;
+  opacity: 1;
+  left: 0;
+}
+.box-container .fa-window-close {
+  position: absolute;
+  right: 4px;
+  top: 0;
+  color: #cc222a;
+  font-size: 14px;
+  cursor: pointer;
+}
+.box-container .child a img {
+  width: 195px;
+  height: 85px;
+}
+
+.box-container #id1 {
+  transform: rotateY(0deg) translateZ(97px);
+}
+.box-container #id2 {
+  transform: rotateY(180deg) translateZ(97px);
+}
+.box-container #id3 {
+  transform: rotateY(90deg) translateZ(97px);
+}
+.box-container #id4 {
+  transform: rotateY(-90deg) translateZ(97px);
+}
+
+
+@media (min-width: 992px){
+    header.header-main {
+        top: -100px !important;
+    }
+    .header-main.fixed-menu .header-top {
+        top: -100px;
+        position: relative;
+    }
+}
+
+.sidebar_ads{
+    position: fixed;
+    top: 70px;
+    left: 20px;
+    z-index: 999;
+    min-height: 300px;
+    min-width: 180px;
+}
+.sidebar_ads.right{
+    left: auto;
+    right: 20px;
+}
+@media (min-width: 1024px) and (max-width: 1500px){
+    
+    .sidebar_ads {
+        left: 0;
+        max-height: 300px;
+        min-width: 150px;
+    }
+    .sidebar_ads.right {
+        left: auto;
+        right: 0;
+    }
+}
+@media (min-width: 1349px){
+   .main {
+        max-width: 1116px !important;
+    } 
+}
+@media (min-width: 1300px) and (max-width: 1400px){
+        .main {
+        max-width: 1016px !important;
+    }
+}
+@media (min-width: 1100px) and (max-width: 1299px){
+        .main {
+        max-width: 936px !important;
+    }
+}
+@media (max-width: 1099px){
+    .sidebar_ads{
+        display: none;
+    }
+}
+     </style>
+     <meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
+     <!-- This site is optimized with the Yoast SEO plugin v23.5 - https://yoast.com/wordpress/plugins/seo/ -->
+     <title>
+      Movie Reviews Archives - Telugu360
+     </title>
+     <link as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;family=Rethink+Sans:ital,wght@0,400..800;1,400..800&amp;display=swap" rel="preload">
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;family=Rethink+Sans:ital,wght@0,400..800;1,400..800&amp;display=swap" media="print" onload="this.media='all'" rel="stylesheet">
+       <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;family=Rethink+Sans:ital,wght@0,400..800;1,400..800&amp;display=swap" rel="stylesheet"/>
+       </noscript>
+       <link href="https://www.telugu360.com/category/movies/telugu-movies-reviews/" rel="canonical"/>
+       <link href="https://www.telugu360.com/category/movies/telugu-movies-reviews/page/2/" rel="next"/>
+       <meta content="en_US" property="og:locale"/>
+       <meta content="article" property="og:type"/>
+       <meta content="Movie Reviews Archives - Telugu360" property="og:title"/>
+       <meta content="https://www.telugu360.com/category/movies/telugu-movies-reviews/" property="og:url"/>
+       <meta content="Telugu360" property="og:site_name"/>
+       <meta content="summary_large_image" name="twitter:card"/>
+       <script class="yoast-schema-graph" type="application/ld+json">
+        {"@context":"https://schema.org","@graph":[{"@type":"CollectionPage","@id":"https://www.telugu360.com/category/movies/telugu-movies-reviews/","url":"https://www.telugu360.com/category/movies/telugu-movies-reviews/","name":"Movie Reviews Archives - Telugu360","isPartOf":{"@id":"https://www.telugu360.com/#website"},"primaryImageOfPage":{"@id":"https://www.telugu360.com/category/movies/telugu-movies-reviews/#primaryimage"},"image":{"@id":"https://www.telugu360.com/category/movies/telugu-movies-reviews/#primaryimage"},"thumbnailUrl":"https://www.telugu360.com/wp-content/uploads/2025/03/Kingston-Movie-Review.jpg","breadcrumb":{"@id":"https://www.telugu360.com/category/movies/telugu-movies-reviews/#breadcrumb"},"inLanguage":"en-US"},{"@type":"ImageObject","inLanguage":"en-US","@id":"https://www.telugu360.com/category/movies/telugu-movies-reviews/#primaryimage","url":"https://www.telugu360.com/wp-content/uploads/2025/03/Kingston-Movie-Review.jpg","contentUrl":"https://www.telugu360.com/wp-content/uploads/2025/03/Kingston-Movie-Review.jpg","width":600,"height":400,"caption":"Kingston Movie Review"},{"@type":"BreadcrumbList","@id":"https://www.telugu360.com/category/movies/telugu-movies-reviews/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.telugu360.com/"},{"@type":"ListItem","position":2,"name":"Movies","item":"https://www.telugu360.com/category/movies/"},{"@type":"ListItem","position":3,"name":"Movie Reviews"}]},{"@type":"WebSite","@id":"https://www.telugu360.com/#website","url":"https://www.telugu360.com/","name":"Telugu 360","description":"Telugu Movies , News","publisher":{"@id":"https://www.telugu360.com/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://www.telugu360.com/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"en-US"},{"@type":"Organization","@id":"https://www.telugu360.com/#organization","name":"Telugu 360","url":"https://www.telugu360.com/","logo":{"@type":"ImageObject","inLanguage":"en-US","@id":"https://www.telugu360.com/#/schema/logo/image/","url":"https://www.telugu360.com/wp-content/uploads/2024/09/telugu360-logo.png","contentUrl":"https://www.telugu360.com/wp-content/uploads/2024/09/telugu360-logo.png","width":1118,"height":256,"caption":"Telugu 360"},"image":{"@id":"https://www.telugu360.com/#/schema/logo/image/"}}]}
+       </script>
+       <!-- / Yoast SEO plugin. -->
+       <link href="//unpkg.com" rel="dns-prefetch"/>
+       <link href="//www.googletagmanager.com" rel="dns-prefetch"/>
+       <link href="//cdn.telugu360.com" rel="dns-prefetch"/>
+       <link href="//pagead2.googlesyndication.com" rel="dns-prefetch"/>
+       <link href="//fundingchoicesmessages.google.com" rel="dns-prefetch"/>
+       <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+       <link href="https://cdn.telugu360.com" rel="preconnect"/>
+       <link href="https://www.telugu360.com/feed/" rel="alternate" title="Telugu360 » Feed" type="application/rss+xml"/>
+       <link href="https://www.telugu360.com/comments/feed/" rel="alternate" title="Telugu360 » Comments Feed" type="application/rss+xml"/>
+       <link href="https://www.telugu360.com/category/movies/telugu-movies-reviews/feed/" rel="alternate" title="Telugu360 » Movie Reviews Category Feed" type="application/rss+xml"/>
+       <link href="https://www.telugu360.com/web-stories/feed/" rel="alternate" title="Telugu360 » Stories Feed" type="application/rss+xml"/>
+       <link href="https://www.telugu360.com/wp-includes/css/dist/block-library/style.min.css?ver=6.5.5" id="wp-block-library-css" media="all" rel="stylesheet" type="text/css">
+        <style id="classic-theme-styles-inline-css" type="text/css">
+         /*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+        </style>
+        <style id="global-styles-inline-css" type="text/css">
+         body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}body .is-layout-grid{display: grid;}body .is-layout-grid > *{margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}
+        </style>
+        <link href="https://www.telugu360.com/wp-content/themes/telugu360/css/slick.css?ver=6.5.5" id="slick-style-css" media="all" rel="stylesheet" type="text/css"/>
+        <link href="https://www.telugu360.com/wp-content/themes/telugu360/css/font-awesome.min.css?ver=6.5.5" id="font-style-css" media="all" rel="stylesheet" type="text/css"/>
+        <link href="https://www.telugu360.com/wp-content/themes/telugu360/style.css?ver=6.5.5" id="main-style-css" media="all" rel="stylesheet" type="text/css"/>
+        <link href="https://www.telugu360.com/wp-content/themes/telugu360/responsive.css?ver=6.5.5" id="responsive-style-css" media="all" rel="stylesheet" type="text/css"/>
+        <link href="https://www.telugu360.com/wp-content/themes/telugu360/css/custom.css?ver=6.5.5" id="custom-css-css" media="all" rel="stylesheet" type="text/css"/>
+        <link href="https://www.telugu360.com/wp-content/plugins/sassy-social-share/public/css/sassy-social-share-public.css?ver=3.3.63" id="heateor_sss_frontend_css-css" media="all" rel="stylesheet" type="text/css"/>
+        <style id="heateor_sss_frontend_css-inline-css" type="text/css">
+         .heateor_sss_button_instagram span.heateor_sss_svg,a.heateor_sss_instagram span.heateor_sss_svg{background:radial-gradient(circle at 30% 107%,#fdf497 0,#fdf497 5%,#fd5949 45%,#d6249f 60%,#285aeb 90%)}div.heateor_sss_horizontal_sharing a.heateor_sss_button_instagram span{background:transparent!important;}div.heateor_sss_standard_follow_icons_container a.heateor_sss_button_instagram span{background:transparent}div.heateor_sss_horizontal_sharing a.heateor_sss_button_instagram span:hover{background:#f69215!important;}div.heateor_sss_standard_follow_icons_container a.heateor_sss_button_instagram span:hover{background:#f69215}.heateor_sss_horizontal_sharing .heateor_sss_svg,.heateor_sss_standard_follow_icons_container .heateor_sss_svg{background-color:transparent!important;background:transparent!important;color:#8e8e8e;border-width:2px;border-style:solid;border-color:#8e8e8e}div.heateor_sss_horizontal_sharing span.heateor_sss_svg svg:hover path:not(.heateor_sss_no_fill),div.heateor_sss_horizontal_sharing span.heateor_sss_svg svg:hover ellipse, div.heateor_sss_horizontal_sharing span.heateor_sss_svg svg:hover circle, div.heateor_sss_horizontal_sharing span.heateor_sss_svg svg:hover polygon, div.heateor_sss_horizontal_sharing span.heateor_sss_svg svg:hover rect:not(.heateor_sss_no_fill){fill:#fff}div.heateor_sss_horizontal_sharing span.heateor_sss_svg svg:hover path.heateor_sss_svg_stroke, div.heateor_sss_horizontal_sharing span.heateor_sss_svg svg:hover rect.heateor_sss_svg_stroke{stroke:#fff}.heateor_sss_horizontal_sharing span.heateor_sss_svg:hover,.heateor_sss_standard_follow_icons_container span.heateor_sss_svg:hover{background-color:#f69215!important;background:#f69215!importantcolor:#fff;border-color:#f69215;}.heateor_sss_vertical_sharing span.heateor_sss_svg,.heateor_sss_floating_follow_icons_container span.heateor_sss_svg{color:#fff;border-width:0px;border-style:solid;border-color:transparent;}.heateor_sss_vertical_sharing span.heateor_sss_svg:hover,.heateor_sss_floating_follow_icons_container span.heateor_sss_svg:hover{border-color:transparent;}@media screen and (max-width:783px) {.heateor_sss_vertical_sharing{display:none!important}}div.heateor_sss_sharing_title{text-align:center}div.heateor_sss_sharing_ul{width:100%;text-align:center;}div.heateor_sss_horizontal_sharing div.heateor_sss_sharing_ul a{float:none!important;display:inline-block;}
+        </style>
+        <link href="https://www.telugu360.com/wp-content/plugins/tablepress/css/build/default.css?ver=2.4.2" id="tablepress-default-css" media="all" rel="stylesheet" type="text/css"/>
+        <script id="jquery-core-js" src="https://www.telugu360.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" type="text/javascript">
+        </script>
+        <script id="jquery-migrate-js" src="https://www.telugu360.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" type="text/javascript">
+        </script>
+        <!-- Google tag (gtag.js) snippet added by Site Kit -->
+        <!-- Google Analytics snippet added by Site Kit -->
+        <script async="" id="google_gtagjs-js" src="https://www.googletagmanager.com/gtag/js?id=GT-PH3HV47B" type="text/javascript">
+        </script>
+        <script id="google_gtagjs-js-after" type="text/javascript">
+         /* <![CDATA[ */
+window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}
+gtag("set","linker",{"domains":["www.telugu360.com"]});
+gtag("js", new Date());
+gtag("set", "developer_id.dZTNiMT", true);
+gtag("config", "GT-PH3HV47B");
+ window._googlesitekit = window._googlesitekit || {}; window._googlesitekit.throttledEvents = []; window._googlesitekit.gtagEvent = (name, data) => { var key = JSON.stringify( { name, data } ); if ( !! window._googlesitekit.throttledEvents[ key ] ) { return; } window._googlesitekit.throttledEvents[ key ] = true; setTimeout( () => { delete window._googlesitekit.throttledEvents[ key ]; }, 5 ); gtag( "event", name, { ...data, event_source: "site-kit" } ); } 
+/* ]]> */
+        </script>
+        <!-- End Google tag (gtag.js) snippet added by Site Kit -->
+        <link href="https://www.telugu360.com/wp-json/" rel="https://api.w.org/"/>
+        <link href="https://www.telugu360.com/wp-json/wp/v2/categories/12" rel="alternate" type="application/json"/>
+        <link href="https://www.telugu360.com/xmlrpc.php?rsd" rel="EditURI" title="RSD" type="application/rsd+xml"/>
+        <meta content="WordPress 6.5.5" name="generator"/>
+        <meta content="Site Kit by Google 1.137.0" name="generator"/>
+        <link href="https://cdn.vuukle.com/" rel="preconnect"/>
+        <link href="https://cdn.vuukle.com/" rel="dns-prefetch"/>
+        <link href="https://api.vuukle.com/" rel="dns-prefetch"/>
+        <link href="https://api.vuukle.com/" rel="preconnect"/>
+        <style>
+         #comments {
+                    display: none !important;
+                }
+        </style>
+        <!-- Google AdSense meta tags added by Site Kit -->
+        <meta content="ca-host-pub-2644536267352236" name="google-adsense-platform-account"/>
+        <meta content="sitekit.withgoogle.com" name="google-adsense-platform-domain"/>
+        <!-- End Google AdSense meta tags added by Site Kit -->
+        <!-- Google AdSense snippet added by Site Kit -->
+        <script async="async" crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6067514478117116&amp;host=ca-host-pub-2644536267352236" type="text/javascript">
+        </script>
+        <!-- End Google AdSense snippet added by Site Kit -->
+        <link href="https://cdn.telugu360.com/wp-content/uploads/2024/10/fav-icon.png" rel="icon" sizes="32x32">
+         <link href="https://cdn.telugu360.com/wp-content/uploads/2024/10/fav-icon.png" rel="icon" sizes="192x192">
+          <link href="https://cdn.telugu360.com/wp-content/uploads/2024/10/fav-icon.png" rel="apple-touch-icon">
+           <meta content="https://cdn.telugu360.com/wp-content/uploads/2024/10/fav-icon.png" name="msapplication-TileImage">
+            <style id="wp-custom-css" type="text/css">
+             h1, h2, h3, h4, h5, h6, a, span, p{	
+       font-family: "Open Sans", sans-serif;
+}
+.foo-main .foo-col:first-child{
+	width: 30%;
+}
+.latestFirst_section .telugu-fonts .top-stories-card-content h6{
+	    line-height: 26px;
+
+}
+.mid-col-1 .category_link {
+    width: auto;
+}
+.latestFirst_section .category_link {
+    width: auto;
+}
+.foo-main .foo-col {
+    width: 17%;
+}
+.foo-nav.first-nav ul{
+	    display: flex;
+    flex-wrap: wrap;
+    gap: 0 9px;
+}
+.foo-nav.first-nav ul li
+{
+	    width: 47%;
+}
+
+.menu-list ul .menu-item-101992 a{
+	    font: normal 20px / 18px 'Ramabhadra', Arial, Helvetica, sans-serif;
+}
+.fa.fa-x-twitter:before{
+	content:"?";
+	font-size:1.2em;
+}
+.relatedArticle_wrapper .related-posts li a{
+	font-size: 13px;
+}
+
+.web_stories_sections .web-stories-list {
+    margin: 0;
+}
+.web_stories_sections .web-stories-list .web-stories-list__inner-wrapper {
+    float: left;
+}
+.web-stories-list.is-view-type-circles .glider-track {
+    margin: 0 auto;
+}
+.web_stories_sections .web-stories-list__story-poster a > img {
+    position: static!important;
+    
+}
+.foo-main .foo-col h6{
+	    font-size: 16px !important;
+}
+.web-stories-list.is-view-type-circles .web-stories-list__story-poster a>img {
+    border-radius: 50%;
+    border-width: 4px!important;
+    border-color: #c73a73!important;
+}
+.web_stories_sections .web-stories-list__story-poster span {
+    width: 100%;
+    padding-top: 4px;
+    float: left;
+    color: var(--wpstory-circle-text-color,#000);
+    font-size: 15px;
+}
+
+
+
+header.header-main {
+    position: sticky;
+    top: 0;
+}
+
+header.header-main.fixed-menu a.logo {
+    width: 100px;
+}
+header.header-main.fixed-menu {
+    background-color: #FFF;
+    box-shadow: 0 0 9px rgba(0,0,0,0.2);
+}
+
+.carousel-1 {
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.bottom_cat {
+    display: flex;
+    width: 100%;
+    gap: 20px;
+}
+.bottom_cat .card-wrap-outer {
+    width: 33.333%;
+}
+.bottom_cat .top-stories-card-img img {
+    height: 90px;
+    object-fit: cover;
+}
+
+.web-stories-list.is-view-type-circles .web-stories-list__story-content-overlay { 
+    padding: 6px 0 0 0; 
+}
+
+.web-stories-list.is-view-type-circles .story-content-overlay__title { 
+    font-weight: 600;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 100%;
+}
+
+.w100p{width:100%;}
+
+.form-submit #submit, .not-found .box #searchsubmit {
+	background: #f69215;
+	color: #fff;
+	text-decoration: none;
+	padding: 15px;
+	text-align: center;
+	min-width: 180px;
+	border: 1px solid #f69215;
+	display: inline-block;
+	font-weight: 700;
+}
+
+.not-found .box {
+	background-color: #FFF;
+	padding: 60px 50px;
+	box-shadow: 0 0 5px rgba(0,0,0,0.1);
+	width: 800px;
+	margin: 30px auto;
+	border-radius: 15px;
+	text-align: center;
+}
+
+.form-submit #submit:hover, .form-submit #submit:focus, .not-found .box #searchsubmit:hover {
+  background: #fff;
+  color: #f69215;
+  border-color: #f69215;
+}
+
+.categories_page .grid {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
+}
+.categories_page .grid .archive-item {
+flex: 0 0 calc(33.33333% - 14px);
+  max-width: calc(33.33333% - 14px);
+	float:left;
+}
+.categories_box {
+	background-color: #FFF;
+	padding: 10px;
+	box-shadow: 0 0 5px rgba(0,0,0,0.1);
+	border-radius: 5px;
+	height: 100%;
+}
+.categories_box .post-thumbnail img {
+	height: 300px;
+	object-fit: cover;
+	width: 100%;
+	object-position: center;
+}
+.categories_box h2 {
+	font-size: 28px;
+	color: #000;
+}
+.categories_box .heateor_sss_sharing_container {
+	margin-bottom: 20px;
+}
+
+.categories_box .categories_box_content{padding:10px;}
+.categories_box h2 a {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	line-clamp: 2;
+	-webkit-box-orient: vertical;
+}
+
+@media ( max-width:767px ) {
+	.telugu-fonts .top-stories-card-list .top-stories-card-list-item .top-stories-card-content h6, .telugu-fonts .top-stories-card-list .top-stories-card-list-item:first-child .top-stories-card-content h6{
+		line-height: 32px !important
+	}
+	.foo-main .foo-col:first-child {
+    width: 100%;
+}
+	  .foo-main .foo-col {
+        width: 50%;
+    }
+	.bottom_cat {
+	display: inline-block;
+	width: 100%;
+	gap: 20px;
+}
+	.bottom_cat .card-wrap-outer {
+	width: 100%;
+	flex: 0 0 100%;
+	max-width: 100%;
+}
+	.bottom_cat .top-stories-card-img img {
+	height: auto;
+	object-fit: cover;
+}
+	
+}
+/**new**/
+body .web-stories-sec{
+	padding: 0;
+}
+
+body .web-stories-list.is-carousel .web-stories-list__archive-link {
+	display: none;
+}
+.Footer-stories-sec .web-stories-list.is-carousel .web-stories-list__archive-link{
+	display: table;
+}
+header.header-main{ padding:10px 0;}
+body .logo {
+  width: 120px;
+}
+body .web-stories-list.is-carousel.has-archive-link{
+	    margin-top: 6px;
+}
+.gallery-mid-sec .breadcrumb-list{ padding-bottom:20px;}
+.article-top-add {
+  padding: 15px 0;
+}
+.articles-template .web-stories-sec {
+	padding: 0;
+}
+.menu-list>ul>li{
+	margin: 0;
+}
+.menu-list>ul>li>a {	
+       font-family: "Open Sans", sans-serif;
+    padding: 0 14px;
+    line-height: 48px;
+    font-size: 14px;
+    color: #000;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.mid-part-sec .card-categories-title{
+	    background: #fff;
+    position: relative;
+    padding: 10px 0 0;
+}
+.mid-part-sec .card-categories-title:after {
+    border-bottom: 1px solid #999;
+    content: "";
+    float: left;
+    z-index: 0;
+    left: 18px;
+    position: absolute;
+    right: 18px;
+    top: 22px;
+}
+.mid-part-sec .card-categories-title h4
+{
+	    color: #111111;
+    background-color: #fff;
+    border: none;
+    padding: 0 19px;
+    position: relative;
+    width: auto;
+    display: table;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0 auto;
+    line-height: 25px;
+    z-index: 1;
+}
+.sub-menu
+{
+	    padding: 15px 0 !important;
+    background: #fff !important;
+    border: none;
+}
+.menu-list .sub-menu a
+{
+	    background: 0 0;
+    display: block;
+    padding: 7px 30px;
+    font-size: 12px;
+    line-height: 20px;
+    color: #111;
+}
+.menu-list .sub-menu li:hover a{
+	background: #fff !important;
+	color: #f69215;
+}
+.top-stories-card-content>*:last-child {
+    font-size: 14px;
+    font-weight: 700;
+    color: #111111;
+    line-height: 18px;
+}
+.article-list ul li a {
+    font-weight: 700;
+ }
+.main-stories-card .card-content h5, .card-wrap-outer .big-stories-card h5
+{
+	    font-size: 18px;
+    line-height: 24px;
+    font-weight: 500;
+    color: #111111;
+}
+.foo-col h6{
+	    font-size: 16px;
+    font-weight: 500;
+    color: #2d2d2d !important;
+}
+.foo-nav ul li a{
+	    color: #8e8e8e !important;
+    font-size: 14px;
+}
+
+
+.bannerAds_wrapper .wpadcenter-adgroup__row {
+        display: block;
+}
+
+.bannerAds_wrapper .wpadcenter-adgroup__row img{
+   width: 100%;
+   height: auto;
+}
+
+.Footer-stories-sec .web-stories-list__inner-wrapper{
+	width: 100%;
+	max-width: 100% !important;
+}
+.Footer-stories-sec .web-stories-list__inner-wrapper .glider-track{
+		width: 100% !important;
+	max-width: 100% !important;
+}
+.Footer-stories-sec .web-stories-list__inner-wrapper .web-stories-list__story {
+    width: 19.1% !important;
+    max-width: 19.1% !important;
+    min-width: 19.1% !important;
+}
+.Footer-stories-sec .web_stories_sections h1
+{
+	    font-size: 21px !important;
+    line-height: 24px;
+    font-weight: 500;
+    color: #111111;
+}
+.Footer-stories-sec .web-stories-list__story-poster:after{
+	display: none;
+}
+.Footer-stories-sec .web-stories-list__story-content-overlay{
+	    width: 100%;
+    background: #00000066;
+    text-align: center;
+    bottom: 4px !important;
+}
+.single-post .card-wrap.main-stories-card .card-img img{
+	height: auto;
+}
+.header-top {
+	display: flex;
+	gap: 80px;
+}
+.header-top .header-logo
+{
+	    width: 22% !important;
+}
+.header-top .google_Right{
+	width: 78%;
+}
+.header-top .google_Right img{
+	width: 100%;
+}
+.HomeMobile_ads{
+	display: none;
+}
+
+.attachment-image img{
+	width: 60%;
+}
+.inner-article-col-left .top-stories-card-list-item h6 {
+    font-size: 13px;
+    font-weight: 500;
+}
+	#search-icon{
+		font-size: 20px;
+	}
+@media (max-width: 767px){
+
+	 .HomeMobile_ads{
+            display: block;
+        }
+        .bannerAds_wrapper{
+            display: none;
+        }
+	.Footer-stories-sec .web_stories_sections h1 {
+    font-size: 20px;
+    margin: 20px 0 14px;
+}
+	.Footer-stories-sec .web-stories-list.is-carousel .web-stories-list__archive-link {
+    font-size: 14px;
+}
+	.header-top .header-logo {
+    width: 40% !important;
+}
+	.header-top .google_Right{
+		display: none;
+	}
+    .switch2_device{
+        display: block;
+        background: #4d4d4d none repeat scroll 0 0;
+        padding-bottom: 4px;
+        padding-top: 2px;
+        text-align: center;
+        width: 100%;
+    }
+    .switch2_device a{
+           color: #fff !important;
+    }
+    .header-main{
+        background: #fff;
+        min-height: 59px;
+    }
+    .header-main .header-top{
+        position: absolute;
+        left: 0;
+        right: 0;
+        width: 100%;
+        display: block;
+    }
+    .header-main .header-top .logo {
+        display: table;
+        margin: 0 auto;
+    }
+    .header-main .header-row{
+        position: unset;
+        align-items: center;
+        padding: 9px 0 0;
+    }
+	.bottom_cat .card-categories-title-wrap {
+    min-height: auto !important;
+ }
+}
+@media (max-width: 991px){
+	  .menu-main {
+        top: 56px;
+        background-color: #fff;  
+        height: calc(100vh - 70px);
+    }
+}
+            </style>
+            <script async="" crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6067514478117116">
+            </script>
+            <!-- Google tag (gtag.js) -->
+            <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-FJ14CDKF8Q">
+            </script>
+            <script>
+             window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+ 
+  gtag('config', 'G-FJ14CDKF8Q');
+            </script>
+           </meta>
+          </link>
+         </link>
+        </link>
+       </link>
+      </link>
+     </link>
+    </link>
+   </link>
+  </meta>
+ </head>
+ <body class="archive category category-telugu-movies-reviews category-12">
+  <div class="sidebar_ads">
+   <!-- Google Ads fallback -->
+   <ins class="adsbygoogle" data-ad-client="ca-pub-6067514478117116" data-ad-format="auto" data-ad-slot="2502989038" data-full-width-responsive="true" style="display:block">
+   </ins>
+   <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+   </script>
+  </div>
+  <div class="sidebar_ads right">
+   <!-- Google Ads fallback -->
+   <ins class="adsbygoogle" data-ad-client="ca-pub-6067514478117116" data-ad-format="auto" data-ad-slot="2502989038" data-full-width-responsive="true" style="display:block">
+   </ins>
+   <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+   </script>
+  </div>
+  <header class="header-main">
+   <div class="main cf">
+    <div class="header-top">
+     <a class="logo header-logo" href="https://www.telugu360.com" target="_self" title="Logo">
+      <img alt="Telugu 360" src="https://cdn.telugu360.com/wp-content/uploads/2024/09/LogoForAppleNews-2-300x69-1.png"/>
+     </a>
+     <div class="google_Right">
+     </div>
+    </div>
+    <div class="header-row animated" data-class="fadeIn">
+     <div class="menu-sec">
+      <div class="menu-main delitemenu">
+       <div class="menu-close-wrap">
+        <a class="menu-close" href="#" title="close">
+         x
+        </a>
+       </div>
+       <div class="menu-list">
+        <ul class="nav navbar-nav navbar-right menu menu fl-theme-menu" id="menu-telugu-main">
+         <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-110230" id="menu-item-110230">
+          <a href="/home">
+           Home
+          </a>
+         </li>
+         <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-101987" id="menu-item-101987">
+          <a href="https://www.telugu360.com/category/movies/telugu-movie-news/">
+           Movie News
+          </a>
+         </li>
+         <li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-254744" id="menu-item-254744">
+          <a aria-current="page" href="https://www.telugu360.com/category/movies/telugu-movies-reviews/">
+           Reviews
+          </a>
+         </li>
+         <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-101983" id="menu-item-101983">
+          <a href="https://www.telugu360.com/category/politics/">
+           Politics
+          </a>
+         </li>
+         <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-101985" id="menu-item-101985">
+          <a href="https://www.telugu360.com/category/boxoffice/">
+           Boxoffice
+          </a>
+         </li>
+         <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-141470" id="menu-item-141470">
+          <a href="/category/movies/telugu-movie-news/">
+           News
+          </a>
+          <ul class="sub-menu">
+           <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-128781" id="menu-item-128781">
+            <a href="https://www.telugu360.com/category/gallery/movies-gallery/">
+             Movies
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-168597" id="menu-item-168597">
+            <a href="https://www.telugu360.com/category/interviews/">
+             Interviews
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-101986" id="menu-item-101986">
+            <a href="https://www.telugu360.com/category/medianews/">
+             Media Watch
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-101984" id="menu-item-101984">
+            <a href="https://www.telugu360.com/category/nri/">
+             NRI
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-156355" id="menu-item-156355">
+            <a href="https://www.telugu360.com/category/press-releases/">
+             Press Releases
+            </a>
+           </li>
+          </ul>
+         </li>
+         <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-297768" id="menu-item-297768">
+          <a href="https://www.telugu360.com/category/videos/">
+           Videos
+          </a>
+         </li>
+         <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-101992" id="menu-item-101992">
+          <a href="/te/">
+           తెలుగు
+          </a>
+         </li>
+        </ul>
+       </div>
+      </div>
+     </div>
+     <div id="search-container">
+      <button aria-label="Search" id="search-icon">
+       <i class="fa fa-search">
+       </i>
+       <!-- FontAwesome icon -->
+      </button>
+      <div class="hidden" id="search-bar">
+       <form action="https://www.telugu360.com/" class="searchform" id="searchform" method="get" role="search">
+        <div>
+         <label class="screen-reader-text" for="s">
+          Search for:
+         </label>
+         <input id="s" name="s" type="text" value=""/>
+         <input id="searchsubmit" type="submit" value="Search"/>
+        </div>
+       </form>
+      </div>
+     </div>
+    </div>
+   </div>
+  </header>
+  <div class="switch2_device">
+   <a href="/te">
+    Switch to: తెలుగు
+   </a>
+  </div>
+  <div class="header-blank">
+  </div>
+  <style>
+   .page-header .page-title {
+        padding-top: 25px;
+        font-size: 30px;
+        margin-bottom: 15px;
+        text-transform: uppercase;
+        font-weight: 700;
+    } 
+    .category-page .post-list {
+       display: flex;
+       flex-wrap: wrap;
+       /* justify-content: space-between; */
+       gap: 20px;
+       margin-bottom: 20px;
+       align-items: elf-start;
+   }
+   .category-page .post-list .post {
+    width: 100%;
+
+    border: 1px solid #E8E8E8;
+    padding: 9px;
+    background-color: #FFF;
+}
+.category-page .post-list .post-thumbnail img,
+.category-page .post-list .post-thumbnail a {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+.category-page .post-list .entry-title {
+ font-size: 18px;
+ line-height: 22px;
+ font-weight: 600;
+ margin-top: 10px;
+ margin-bottom: 11px;
+ display: -webkit-box;
+ -webkit-box-orient: vertical;
+ -webkit-line-clamp: 2;
+ overflow: hidden;
+ text-overflow: ellipsis;
+}
+.category-page .post-list .entry-summary {
+ font-size: 14px;
+     width: 100%;
+    word-break: break-all;
+}
+.category-page .post-list .entry-title a {
+    color: #111111;
+}
+.category-page .post-list .heateor_sss_sharing_container.heateor_sss_horizontal_sharing {
+    display: none;
+}
+.post-list.section-1{
+    grid-template-columns: 2fr 1fr 1fr;
+    display: grid;
+    gap: 5px;
+}
+.post-list.section-1 .post{
+    width: 100% !important;
+}
+.post-list.section-1 .post:first-child{
+    grid-row-start: 1;
+    grid-row-end: span 2;
+}
+.post-list.section-1 .post:first-child .post-thumbnail a img{
+        height: 400px !important;
+}
+.post-list.section-1 .post:first-child .entry-title{
+ font-size: 27px;
+ line-height: 34px;
+ font-weight: 500; 
+}
+.post-list.section-1 .post .entry-summary{
+    grid-row-start: 1;
+    grid-row-end: span 2;
+}
+.post-list.section-1 .post {
+ position: relative;
+ padding: 0;
+ border: none;
+}
+.post-list.section-1 .post .entry-title{
+    font-size: 16px;
+    line-height: 21px;
+    font-weight: 500;
+    margin-top: 0;
+    position: absolute;
+    margin-bottom: 0;
+    bottom: 0;
+    background: #00000038;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    padding: 17px 11px;
+}
+.post-list.section-1 .post .entry-title a{
+    color: #fff;
+}
+.post-list.section-1 .post a img, .post-list.section-1 .post .post-thumbnail a
+{
+    height: 198px !important;
+}
+.second_wrapper{
+    display: flex;
+    gap: 15px;
+    padding-top: 50px;
+}
+.second_wrapper .section-2{
+    width: 75%;
+}
+ .sidebar_cont{
+    width: 25%;
+    margin-left: auto;
+}
+.paginations
+{
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    font-size: 16px;
+    margin-top: 30px;
+}
+.top-stories-card-content>*:last-child{
+    font-size: 13px;
+    font-weight: 500;
+}
+@media (max-width: 767px){
+	 .post-list.section-1 .post{
+  		display: flex;
+	    flex-direction: row-reverse;
+	    gap: 10px;
+        padding: 9px;
+  	}
+  	.post-list.section-1 .post .post-thumbnail {
+    	width: 30%;
+	}
+	.post-list.section-1 .post .post-thumbnail a{
+		height: 110px !important;
+	}
+	.post-list.section-1 .post a img{
+		height: 110px !important;
+	}
+	.post-list.section-1 .post .entry-title{
+		font-size: 18px;
+	    line-height: 22px;
+	    font-weight: 600;
+	    background: transparent;
+        padding: 0;
+	    position: unset;
+	    margin-bottom: 11px;
+	    width: 70%;
+	}
+	.post-list.section-1 .post .entry-title a{
+		    color: #111111;
+		        margin-top: 10px;
+    margin-bottom: 11px;
+    display: table;
+	}
+	.post-list.section-1 .post:first-child .entry-title{
+		    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+	}
+    .post-list.section-1 .post:first-child .post-thumbnail a img {
+        height: 110px !important;
+    }
+
+
+
+    .post-list.section-1 {
+        grid-template-columns: 1fr;
+    }
+    .second_wrapper {
+        gap: 7px;
+        padding-top: 20px;
+        flex-wrap: wrap;
+    }
+    .second_wrapper .section-2, .second_wrapper .sidebar_cont{
+        width: 100%;
+    }
+    .second_wrapper .sidebar_cont{
+        margin-top: 20px;
+    }
+        .page-header .page-title {
+    font-size: 25px ;
+    line-height: 32px ;
+}
+    .post-list.section-1 .post:first-child .entry-title {
+    line-height: 24px ;
+ }
+ .sidebar_cont {
+    width: 100%;
+}
+}
+
+@media (min-width: 576px) {
+    .category-page .post-list .post {
+        width: 48%;
+    }
+}
+
+@media (min-width: 992px) {
+    .category-page .post-list .post {
+        width: calc(33% - 15px);
+    }
+}
+@media (max-width: 767px){
+    .second_wrapper .post-list .post {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 10px;
+}
+.second_wrapper .cat_cont {
+    width: 70%;
+}
+.second_wrapper .post-thumbnail  {
+    width: 30%;
+}
+.second_wrapper .entry-summary{
+    display: none
+}
+.second_wrapper .post-thumbnail img, .second_wrapper .post-list .post-thumbnail a{
+    height: 110px !important;
+}
+}
+  </style>
+  <section class="category-page">
+   <div class="main cf">
+    <header class="page-header">
+     <h1 class="page-title">
+      Category:
+      <span>
+       Movie Reviews
+      </span>
+     </h1>
+    </header>
+    <div class="post-list section-1">
+     <article class="post-320665 post type-post status-publish format-standard has-post-thumbnail hentry category-telugu-movies-reviews category-revslider tag-kingston tag-kingston-review" id="post-320665">
+      <div class="post-thumbnail">
+       <a href="https://www.telugu360.com/kingston-movie-review/">
+        <img alt="Kingston Movie Review" src="https://cdn.telugu360.com/wp-content/uploads/2025/03/Kingston-Movie-Review-300x200.jpg">
+        </img>
+       </a>
+      </div>
+      <h2 class="entry-title">
+       <a href="https://www.telugu360.com/kingston-movie-review/">
+        Kingston Movie Review
+       </a>
+      </h2>
+      <!--   <div class="entry-summary">
+                                Kingston Movie Review Kingston Movie Review Telugu360 Rating: 2.25/5 GV&hellip;                            </div> -->
+     </article>
+     <article class="post-319768 post type-post status-publish format-standard has-post-thumbnail hentry category-telugu-movies-reviews category-revslider tag-mazaka tag-mazaka-review tag-rithu-varma tag-sundeep-kishan tag-trinadha-rao-nakkina" id="post-319768">
+      <div class="post-thumbnail">
+       <a href="https://www.telugu360.com/sundeep-kishans-mazaka-review/">
+        <img alt="Sundeep Kishan’s Mazaka Review" src="https://cdn.telugu360.com/wp-content/uploads/2025/02/Mazaka-Movie-Review-300x200.jpg"/>
+       </a>
+      </div>
+      <h2 class="entry-title">
+       <a href="https://www.telugu360.com/sundeep-kishans-mazaka-review/">
+        Sundeep Kishan’s Mazaka Review
+       </a>
+      </h2>
+      <!--   <div class="entry-summary">
+                                Mazaka Movie Review Mazaka Movie Review Telugu360 Rating: 2.5/5 Tollywood&hellip;                            </div> -->
+     </article>
+     <article class="post-319198 post type-post status-publish format-standard has-post-thumbnail hentry category-telugu-movies-reviews category-revslider tag-jabilamma-neeku-antha-kopama tag-jabilamma-neeku-antha-kopama-movie-review tag-jabilamma-neeku-antha-kopama-review" id="post-319198">
+      <div class="post-thumbnail">
+       <a href="https://www.telugu360.com/jaabilamma-neeku-antha-kopama-movie-review/">
+        <img alt="Jaabilamma Neeku Antha Kopama Movie Review" src="https://cdn.telugu360.com/wp-content/uploads/2025/02/Jabilamma-Neeku-Antha-Kopama-movie-review-1-300x200.jpg"/>
+       </a>
+      </div>
+      <h2 class="entry-title">
+       <a href="https://www.telugu360.com/jaabilamma-neeku-antha-kopama-movie-review/">
+        Jaabilamma Neeku Antha Kopama Movie Review
+       </a>
+      </h2>
+      <!--   <div class="entry-summary">
+                                jabilamma neeku antha kopama movie review Telugu360 Rating 2.75/5 Indian&hellip;                            </div> -->
+     </article>
+     <article class="post-318590 post type-post status-publish format-standard has-post-thumbnail hentry category-telugu-movies-reviews category-revslider tag-laila tag-laila-movie-review tag-laila-review tag-vishwak-sen" id="post-318590">
+      <div class="post-thumbnail">
+       <a href="https://www.telugu360.com/vishwak-sens-laila-movie-review/">
+        <img alt="Vishwak Sen’s Laila Movie Review" src="https://cdn.telugu360.com/wp-content/uploads/2025/02/Laila-Movie-Review-1-300x200.jpg"/>
+       </a>
+      </div>
+      <h2 class="entry-title">
+       <a href="https://www.telugu360.com/vishwak-sens-laila-movie-review/">
+        Vishwak Sen’s Laila Movie Review
+       </a>
+      </h2>
+      <!--   <div class="entry-summary">
+                                Laila Movie Review Telugu360 Rating: 0.5/5 Lead actors essaying the&hellip;                            </div> -->
+     </article>
+     <article class="post-317987 post type-post status-publish format-standard has-post-thumbnail hentry category-telugu-movies-reviews category-revslider tag-chandoo-mondeti tag-naga-chaitanya tag-sai-pallavi tag-thandel tag-thandel-review" id="post-317987">
+      <div class="post-thumbnail">
+       <a href="https://www.telugu360.com/thandel-movie-review/">
+        <img alt="Thandel Movie Review –  A Tale of Love and Patriotism !" src="https://cdn.telugu360.com/wp-content/uploads/2025/02/Thandel-Movie-Review-300x200.jpg"/>
+       </a>
+      </div>
+      <h2 class="entry-title">
+       <a href="https://www.telugu360.com/thandel-movie-review/">
+        Thandel Movie Review –  A Tale of Love and Patriotism !
+       </a>
+      </h2>
+      <!--   <div class="entry-summary">
+                                Thandel Movie Review Thandel Movie Review Telugu360 Rating: 2.75/5 Story:&hellip;                            </div> -->
+     </article>
+    </div>
+    <div class="second_wrapper">
+     <div class="section-2">
+      <div class="post-list">
+       <article class="post-315708 post type-post status-publish format-standard has-post-thumbnail hentry category-telugu-movies-reviews category-revslider tag-aishwarya-rajesh tag-anil-ravipudi tag-meenakshi-chaudhary tag-sankranthiki-vasthunnam tag-sankranthiki-vasthunnam-review tag-venkatesh-daggubati" id="post-315708">
+        <div class="post-thumbnail">
+         <a href="https://www.telugu360.com/sankranthiki-vasthunnam-review/">
+          <img alt="Sankranthiki Vasthunnam Review – A Farcical Entertainer" src="https://cdn.telugu360.com/wp-content/uploads/2025/01/Sankranthiki-Vasthunnam-300x200.jpg"/>
+         </a>
+        </div>
+        <div class="cat_cont">
+         <h2 class="entry-title">
+          <a href="https://www.telugu360.com/sankranthiki-vasthunnam-review/">
+           Sankranthiki Vasthunnam Review – A Farcical Entertainer
+          </a>
+         </h2>
+         <div class="entry-summary">
+          Sankranthiki Vasthunnam Movie Review Sankranthiki Vasthunnam Movie Review Telugu360 Rating:…
+         </div>
+        </div>
+       </article>
+       <article class="post-315541 post type-post status-publish format-standard has-post-thumbnail hentry category-telugu-movies-reviews category-revslider tag-balakrishna tag-daaku-maharaaj tag-daaku-maharaaj-review" id="post-315541">
+        <div class="post-thumbnail">
+         <a href="https://www.telugu360.com/daaku-maharaaj-review-a-stylish-action-film/">
+          <img alt="Daaku Maharaaj  Review : A Stylish Action film!" src="https://cdn.telugu360.com/wp-content/uploads/2025/01/daaku-maharaaj-movie-review-300x200.jpg"/>
+         </a>
+        </div>
+        <div class="cat_cont">
+         <h2 class="entry-title">
+          <a href="https://www.telugu360.com/daaku-maharaaj-review-a-stylish-action-film/">
+           Daaku Maharaaj  Review : A Stylish Action film!
+          </a>
+         </h2>
+         <div class="entry-summary">
+          Daaku Maharaaj Movie Review Daaku Maharaaj Movie Review Telugu360 Rating:…
+         </div>
+        </div>
+       </article>
+       <article class="post-315284 post type-post status-publish format-standard has-post-thumbnail hentry category-telugu-movies-reviews category-revslider tag-director-shankar tag-game-changer tag-game-changer-review tag-kiara-advani tag-ram-charan" id="post-315284">
+        <div class="post-thumbnail">
+         <a href="https://www.telugu360.com/game-changer-movie-review/">
+          <img alt="Game Changer Movie Review: A Superficial Political Drama!" src="https://cdn.telugu360.com/wp-content/uploads/2025/01/Game-Changer-Movie-Review-300x200.jpg"/>
+         </a>
+        </div>
+        <div class="cat_cont">
+         <h2 class="entry-title">
+          <a href="https://www.telugu360.com/game-changer-movie-review/">
+           Game Changer Movie Review: A Superficial Political Drama!
+          </a>
+         </h2>
+         <div class="entry-summary">
+          Game Changer Movie Review Game Changer Movie Review Telugu360 Rating:2.5/5…
+         </div>
+        </div>
+       </article>
+       <article class="post-312592 post type-post status-publish format-standard has-post-thumbnail hentry category-telugu-movies-reviews category-revslider tag-allari-naresh tag-allari-naresh-bachhala-malli tag-bachhala-malli tag-bachhala-malli-review" id="post-312592">
+        <div class="post-thumbnail">
+         <a href="https://www.telugu360.com/bachchala-malli-movie-review/">
+          <img alt="Bachchala Malli Movie Review: A Story of Foolish Hero !" src="https://cdn.telugu360.com/wp-content/uploads/2024/12/bachhala-malli-movie-review-300x200.jpg"/>
+         </a>
+        </div>
+        <div class="cat_cont">
+         <h2 class="entry-title">
+          <a href="https://www.telugu360.com/bachchala-malli-movie-review/">
+           Bachchala Malli Movie Review: A Story of Foolish Hero !
+          </a>
+         </h2>
+         <div class="entry-summary">
+          bachhala malli movie review Telugu360 Rating : 2.25/5 After Naandhi,…
+         </div>
+        </div>
+       </article>
+       <article class="post-310572 post type-post status-publish format-standard has-post-thumbnail hentry category-telugu-movies-reviews category-revslider tag-allu-arjun tag-pushpa2 tag-pushpa2-review tag-pushpa2-the-rule tag-pushpa2-the-rule-review tag-rashmika-mandanna tag-sukumar" id="post-310572">
+        <div class="post-thumbnail">
+         <a href="https://www.telugu360.com/pushpa-2-the-rule-movie-review/">
+          <img alt="Pushpa 2 The Rule Review – Allu Arjun’s Powerhouse Performance" src="https://cdn.telugu360.com/wp-content/uploads/2024/12/Pushpa-2-The-Rule-Movie-Review-300x200.jpg"/>
+         </a>
+        </div>
+        <div class="cat_cont">
+         <h2 class="entry-title">
+          <a href="https://www.telugu360.com/pushpa-2-the-rule-movie-review/">
+           Pushpa 2 The Rule Review – Allu Arjun’s Powerhouse Performance
+          </a>
+         </h2>
+         <div class="entry-summary">
+          Pushpa 2 The Rule Movie Review Pushpa 2 The Rule…
+         </div>
+        </div>
+       </article>
+       <article class="post-308894 post type-post status-publish format-standard has-post-thumbnail hentry category-telugu-movies-reviews tag-satya-dev tag-zebra tag-zebra-review" id="post-308894">
+        <div class="post-thumbnail">
+         <a href="https://www.telugu360.com/satyadevs-zebra-movie-review/">
+          <img alt="Satyadev’s Zebra Movie Review" src="https://cdn.telugu360.com/wp-content/uploads/2024/11/Zebra-Movie-Review-300x200.jpg"/>
+         </a>
+        </div>
+        <div class="cat_cont">
+         <h2 class="entry-title">
+          <a href="https://www.telugu360.com/satyadevs-zebra-movie-review/">
+           Satyadev’s Zebra Movie Review
+          </a>
+         </h2>
+         <div class="entry-summary">
+          Zebra Movie Review Telugu360 Rating 1.75/5 Satyadev is a great…
+         </div>
+        </div>
+       </article>
+       <article class="post-308820 post type-post status-publish format-standard has-post-thumbnail hentry category-telugu-movies-reviews category-revslider tag-mechanic-rocky tag-mechanic-rocky-movie-review tag-mechanic-rocky-review tag-meenakshi-chaudhary tag-vishwak-sen" id="post-308820">
+        <div class="post-thumbnail">
+         <a href="https://www.telugu360.com/vishwak-sens-mechanic-rocky-movie-review/">
+          <img alt="Vishwak Sen’s Mechanic Rocky Movie Review" src="https://cdn.telugu360.com/wp-content/uploads/2024/11/Mechanic-Rocky-Movie-Review-300x200.jpg"/>
+         </a>
+        </div>
+        <div class="cat_cont">
+         <h2 class="entry-title">
+          <a href="https://www.telugu360.com/vishwak-sens-mechanic-rocky-movie-review/">
+           Vishwak Sen’s Mechanic Rocky Movie Review
+          </a>
+         </h2>
+         <div class="entry-summary">
+          Mechanic Rocky Movie Review Telugu360 Rating 2.75/5 Vishwak Sen is…
+         </div>
+        </div>
+       </article>
+       <article class="post-307097 post type-post status-publish format-standard has-post-thumbnail hentry category-telugu-movies-reviews tag-kanguva tag-kanguva-review tag-suriya" id="post-307097">
+        <div class="post-thumbnail">
+         <a href="https://www.telugu360.com/suriyas-kanguva-movie-review/">
+          <img alt="Suriya’s Kanguva Movie Review" src="https://cdn.telugu360.com/wp-content/uploads/2024/11/kanguva-movie-review-300x200.jpg"/>
+         </a>
+        </div>
+        <div class="cat_cont">
+         <h2 class="entry-title">
+          <a href="https://www.telugu360.com/suriyas-kanguva-movie-review/">
+           Suriya’s Kanguva Movie Review
+          </a>
+         </h2>
+         <div class="entry-summary">
+          Kanguva Movie Review Telugu360 Rating: 2/5 Suriya’s Kanguva is one…
+         </div>
+        </div>
+       </article>
+       <article class="post-307093 post type-post status-publish format-standard has-post-thumbnail hentry category-telugu-movies-reviews tag-matka tag-matka-review tag-varun-tej" id="post-307093">
+        <div class="post-thumbnail">
+         <a href="https://www.telugu360.com/matka-movie-review/">
+          <img alt="Varun Tej’s Matka Movie Review" src="https://cdn.telugu360.com/wp-content/uploads/2024/11/Matka-Movie-Review-300x200.jpg"/>
+         </a>
+        </div>
+        <div class="cat_cont">
+         <h2 class="entry-title">
+          <a href="https://www.telugu360.com/matka-movie-review/">
+           Varun Tej’s Matka Movie Review
+          </a>
+         </h2>
+         <div class="entry-summary">
+          Matka Movie Review Telugu360 Rating: 2/5 Mega Prince Varun Tej…
+         </div>
+        </div>
+       </article>
+      </div>
+      <div class="paginations">
+       <span aria-current="page" class="page-numbers current">
+        1
+       </span>
+       <a class="page-numbers" href="https://www.telugu360.com/category/movies/telugu-movies-reviews/page/2/">
+        2
+       </a>
+       <a class="page-numbers" href="https://www.telugu360.com/category/movies/telugu-movies-reviews/page/3/">
+        3
+       </a>
+       <span class="page-numbers dots">
+        …
+       </span>
+       <a class="page-numbers" href="https://www.telugu360.com/category/movies/telugu-movies-reviews/page/63/">
+        63
+       </a>
+       <a class="next page-numbers" href="https://www.telugu360.com/category/movies/telugu-movies-reviews/page/2/">
+        Next »
+       </a>
+      </div>
+     </div>
+     <div class="sidebar_cont mid-part-sec">
+      <div class="card-wrap-outer">
+       <div class="card-categories-title">
+        <h4>
+         Latest
+        </h4>
+       </div>
+       <div class="card-wrap top-stories-card card-categories-title-wrap">
+        <div class="top-stories-card-list">
+         <a class="top-stories-card-list-item" href="https://www.telugu360.com/adhi-dha-surprisu-ketikas-sultry-show/" title="Adhi Dha Surprisu: Ketika’s Sultry Show">
+          <div class="top-stories-card-row c-row">
+           <div class="top-stories-card-left-col c-col">
+            <div class="top-stories-card-img">
+             <img alt="Adhi Dha Surprisu: Ketika’s Sultry Show" src="https://cdn.telugu360.com/wp-content/uploads/2025/03/adhi-dha-surprisu-song.jpg"/>
+            </div>
+           </div>
+           <div class="top-stories-card-right-col c-col">
+            <div class="top-stories-card-content">
+             <h6>
+              Adhi Dha Surprisu: Ketika’s Sultry Show
+             </h6>
+            </div>
+           </div>
+          </div>
+         </a>
+         <hr/>
+         <a class="top-stories-card-list-item" href="https://www.telugu360.com/shanmukha-movie-trailer-launch-event/" title="Shanmukha Movie Trailer Launch Event">
+          <div class="top-stories-card-row c-row">
+           <div class="top-stories-card-left-col c-col">
+            <div class="top-stories-card-img">
+             <img alt="Shanmukha Movie Trailer Launch Event" src="https://cdn.telugu360.com/wp-content/uploads/2025/03/Shanmukha-Movie-Trailer-Launch-Event.jpg"/>
+            </div>
+           </div>
+           <div class="top-stories-card-right-col c-col">
+            <div class="top-stories-card-content">
+             <h6>
+              Shanmukha Movie Trailer Launch Event
+             </h6>
+            </div>
+           </div>
+          </div>
+         </a>
+         <hr/>
+         <a class="top-stories-card-list-item" href="https://www.telugu360.com/jagga-reddy-never-ceases-to-amaze/" title="Jagga Reddy never ceases to amaze">
+          <div class="top-stories-card-row c-row">
+           <div class="top-stories-card-left-col c-col">
+            <div class="top-stories-card-img">
+             <img alt="Jagga Reddy never ceases to amaze" src="https://cdn.telugu360.com/wp-content/uploads/2023/08/jagga-reddy.jpg"/>
+            </div>
+           </div>
+           <div class="top-stories-card-right-col c-col">
+            <div class="top-stories-card-content">
+             <h6>
+              Jagga Reddy never ceases to amaze
+             </h6>
+            </div>
+           </div>
+          </div>
+         </a>
+         <hr/>
+         <a class="top-stories-card-list-item" href="https://www.telugu360.com/nani-shelves-cibi-chakaravarthi-film/" title="Nani shelves one more Film before Start">
+          <div class="top-stories-card-row c-row">
+           <div class="top-stories-card-left-col c-col">
+            <div class="top-stories-card-img">
+             <img alt="Nani shelves one more Film before Start" src="https://cdn.telugu360.com/wp-content/uploads/2024/10/Nani.jpg"/>
+            </div>
+           </div>
+           <div class="top-stories-card-right-col c-col">
+            <div class="top-stories-card-content">
+             <h6>
+              Nani shelves one more Film before Start
+             </h6>
+            </div>
+           </div>
+          </div>
+         </a>
+         <hr/>
+         <a class="top-stories-card-list-item" href="https://www.telugu360.com/hrithiks-injury-disrupts-ntrs-plans/" title="Hrithik’s Injury disrupts NTR’s plans">
+          <div class="top-stories-card-row c-row">
+           <div class="top-stories-card-left-col c-col">
+            <div class="top-stories-card-img">
+             <img alt="Hrithik’s Injury disrupts NTR’s plans" src="https://cdn.telugu360.com/wp-content/uploads/2025/01/NTR-4.jpg"/>
+            </div>
+           </div>
+           <div class="top-stories-card-right-col c-col">
+            <div class="top-stories-card-content">
+             <h6>
+              Hrithik’s Injury disrupts NTR’s plans
+             </h6>
+            </div>
+           </div>
+          </div>
+         </a>
+         <hr/>
+         <a class="top-stories-card-list-item" href="https://www.telugu360.com/eye-opener-on-honour-killings-sensational-verdict-in-pranay-murder-case/" title="Eye opener on honour killings: Sensational verdict in Pranay murder case">
+          <div class="top-stories-card-row c-row">
+           <div class="top-stories-card-left-col c-col">
+            <div class="top-stories-card-img">
+             <img alt="Eye opener on honour killings: Sensational verdict in Pranay murder case" src="https://cdn.telugu360.com/wp-content/uploads/2025/03/Pranay-murder-case.jpg"/>
+            </div>
+           </div>
+           <div class="top-stories-card-right-col c-col">
+            <div class="top-stories-card-content">
+             <h6>
+              Eye opener on honour killings: Sensational verdict in Pranay murder case
+             </h6>
+            </div>
+           </div>
+          </div>
+         </a>
+         <hr/>
+         <a class="top-stories-card-list-item" href="https://www.telugu360.com/puri-jagannadh-in-talks-with-nagarjuna/" title="Puri Jagannadh in talks with Nagarjuna?">
+          <div class="top-stories-card-row c-row">
+           <div class="top-stories-card-left-col c-col">
+            <div class="top-stories-card-img">
+             <img alt="Puri Jagannadh in talks with Nagarjuna?" src="https://cdn.telugu360.com/wp-content/uploads/2025/03/puri-and-nagarjuna.jpg"/>
+            </div>
+           </div>
+           <div class="top-stories-card-right-col c-col">
+            <div class="top-stories-card-content">
+             <h6>
+              Puri Jagannadh in talks with Nagarjuna?
+             </h6>
+            </div>
+           </div>
+          </div>
+         </a>
+         <hr/>
+         <a class="top-stories-card-list-item" href="https://www.telugu360.com/dasara-director-focuses-on-multiple-projects/" title="Dasara director focuses on Multiple Projects">
+          <div class="top-stories-card-row c-row">
+           <div class="top-stories-card-left-col c-col">
+            <div class="top-stories-card-img">
+             <img alt="Dasara director focuses on Multiple Projects" src="https://cdn.telugu360.com/wp-content/uploads/2024/11/Srikanth-odela.jpg"/>
+            </div>
+           </div>
+           <div class="top-stories-card-right-col c-col">
+            <div class="top-stories-card-content">
+             <h6>
+              Dasara director focuses on Multiple Projects
+             </h6>
+            </div>
+           </div>
+          </div>
+         </a>
+         <hr/>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section>
+  <footer class="foo-main">
+   <div class="foo-sec">
+    <div class="main cf">
+     <hr/>
+     <div class="foo-main-row c-row">
+      <div class="foo-col font-reduce">
+       <h6>
+        Authors
+       </h6>
+       <div class="foo-nav first-nav">
+        <ul>
+         <li>
+          <a href="/author/nethra" title="nethra">
+           nethra
+          </a>
+         </li>
+         <li>
+          <a href="/author/nymisha" title="nymisha">
+           nymisha
+          </a>
+         </li>
+         <li>
+          <a href="/author/swathi" title="swathi">
+           swathi
+          </a>
+         </li>
+         <li>
+          <a href="/author/swathy" title="swathy">
+           swathy
+          </a>
+         </li>
+        </ul>
+       </div>
+      </div>
+      <div class="foo-col">
+       <h6>
+        News
+       </h6>
+       <div class="foo-nav">
+        <div class="homepage-widgets" id="homepage-widgets">
+         <div class="widget widget_nav_menu" id="nav_menu-3">
+          <div class="menu-fotter-2-news-container">
+           <ul class="menu" id="menu-fotter-2-news">
+            <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-101943" id="menu-item-101943">
+             <a href="https://www.telugu360.com/category/movies/telugu-movie-news/">
+              Movie News
+             </a>
+            </li>
+            <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-101942" id="menu-item-101942">
+             <a href="https://www.telugu360.com/category/boxoffice/">
+              Boxoffice
+             </a>
+            </li>
+            <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-101945" id="menu-item-101945">
+             <a href="https://www.telugu360.com/category/politics/">
+              Politics
+             </a>
+            </li>
+            <li class="menu-item menu-item-type-taxonomy menu-item-object-category current-menu-item menu-item-101944" id="menu-item-101944">
+             <a aria-current="page" href="https://www.telugu360.com/category/movies/telugu-movies-reviews/">
+              Movie Reviews
+             </a>
+            </li>
+           </ul>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="foo-col">
+       <h6>
+        Galleries
+       </h6>
+       <div class="foo-nav">
+        <div class="homepage-widgets" id="homepage-widgets">
+         <div class="widget widget_nav_menu" id="nav_menu-2">
+          <div class="menu-fotter-3-galleries-container">
+           <ul class="menu" id="menu-fotter-3-galleries">
+            <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-101973" id="menu-item-101973">
+             <a href="https://www.telugu360.com/category/gallery/actors/">
+              Actors
+             </a>
+            </li>
+            <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-101974" id="menu-item-101974">
+             <a href="https://www.telugu360.com/category/gallery/actress/">
+              Actress
+             </a>
+            </li>
+            <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-101975" id="menu-item-101975">
+             <a href="https://www.telugu360.com/category/gallery/movies-gallery/">
+              Movies
+             </a>
+            </li>
+            <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-101976" id="menu-item-101976">
+             <a href="https://www.telugu360.com/category/politics/">
+              Politics
+             </a>
+            </li>
+           </ul>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="foo-col font-reduce">
+       <h6>
+        Telugu360
+       </h6>
+       <div class="foo-nav">
+        <ul>
+         <li>
+          <a href="https://www.telugu360.com/about-us/" title="About Us">
+           About Us
+          </a>
+         </li>
+         <li>
+          <a href="https://www.telugu360.com/disclaimer/" title="Disclaimer">
+           Disclaimer
+          </a>
+         </li>
+         <li>
+          <a href="https://www.telugu360.com/privacy-policy/" title="Privacy Policy">
+           Privacy Policy
+          </a>
+         </li>
+         <li>
+          <a href="https://www.telugu360.com/terms-of-use/" title="Terms of Use">
+           Terms of Use
+          </a>
+         </li>
+         <li>
+          <a href="https://www.telugu360.com/contact/" title="Contact">
+           Contact
+          </a>
+         </li>
+        </ul>
+       </div>
+      </div>
+      <div class="foo-col foo-social-col">
+       <h6>
+        Follow and like us
+       </h6>
+       <ul class="social-links">
+        <li>
+         <a href="https://www.facebook.com/telugu360" target="_blank">
+          <i aria-hidden="true" class="fa fa-facebook">
+          </i>
+         </a>
+        </li>
+        <li>
+         <a href="https://www.youtube.com/@Telugu360Official/videos" target="_blank">
+          <i aria-hidden="true" class="fa fa-youtube">
+          </i>
+         </a>
+        </li>
+        <li>
+         <a href="https://x.com/telugu360" target="_blank">
+          <i aria-hidden="true" class="fa fa-x-twitter">
+          </i>
+         </a>
+        </li>
+       </ul>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="foo-disc">
+    <div class="main cf">
+     <div class="foo-disc-content">
+      <p>
+       Telugu360 is an online news paper based out of Hyderabad. Telugu360 is known for breaking news first on web media and is referenced by all the major publications for Telugu news.
+      </p>
+      <p>
+       © 2015 - 2025 Telugu360. All rights reserved.
+      </p>
+     </div>
+    </div>
+   </div>
+  </footer>
+  <script async="" crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6067514478117116">
+  </script>
+  <script id="gsap-js" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js?ver=6.5.5" type="text/javascript">
+  </script>
+  <!-- Test site in article ad -->
+  <ins class="adsbygoogle" data-ad-client="ca-pub-6067514478117116" data-ad-format="auto" data-ad-slot="2502989038" data-full-width-responsive="true" style="display:block">
+  </ins>
+  <script>
+   (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+  <link href="https://www.telugu360.com/wp-content/plugins/wpadcenter/public/css/wpadcenter-public.min.css?ver=2.5.6" id="wpadcenter-frontend-css" media="all" rel="stylesheet" type="text/css">
+   <script id="rocket-browser-checker-js-after" type="text/javascript">
+    /* <![CDATA[ */
+"use strict";var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||!1,descriptor.configurable=!0,"value"in descriptor&&(descriptor.writable=!0),Object.defineProperty(target,descriptor.key,descriptor)}}return function(Constructor,protoProps,staticProps){return protoProps&&defineProperties(Constructor.prototype,protoProps),staticProps&&defineProperties(Constructor,staticProps),Constructor}}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor))throw new TypeError("Cannot call a class as a function")}var RocketBrowserCompatibilityChecker=function(){function RocketBrowserCompatibilityChecker(options){_classCallCheck(this,RocketBrowserCompatibilityChecker),this.passiveSupported=!1,this._checkPassiveOption(this),this.options=!!this.passiveSupported&&options}return _createClass(RocketBrowserCompatibilityChecker,[{key:"_checkPassiveOption",value:function(self){try{var options={get passive(){return!(self.passiveSupported=!0)}};window.addEventListener("test",null,options),window.removeEventListener("test",null,options)}catch(err){self.passiveSupported=!1}}},{key:"initRequestIdleCallback",value:function(){!1 in window&&(window.requestIdleCallback=function(cb){var start=Date.now();return setTimeout(function(){cb({didTimeout:!1,timeRemaining:function(){return Math.max(0,50-(Date.now()-start))}})},1)}),!1 in window&&(window.cancelIdleCallback=function(id){return clearTimeout(id)})}},{key:"isDataSaverModeOn",value:function(){return"connection"in navigator&&!0===navigator.connection.saveData}},{key:"supportsLinkPrefetch",value:function(){var elem=document.createElement("link");return elem.relList&&elem.relList.supports&&elem.relList.supports("prefetch")&&window.IntersectionObserver&&"isIntersecting"in IntersectionObserverEntry.prototype}},{key:"isSlowConnection",value:function(){return"connection"in navigator&&"effectiveType"in navigator.connection&&("2g"===navigator.connection.effectiveType||"slow-2g"===navigator.connection.effectiveType)}}]),RocketBrowserCompatibilityChecker}();
+/* ]]> */
+   </script>
+   <script id="rocket-preload-links-js-extra" type="text/javascript">
+    /* <![CDATA[ */
+var RocketPreloadLinksConfig = {"excludeUris":"\/(?:.+\/)?feed(?:\/(?:.+\/?)?)?$|\/(?:.+\/)?embed\/|http:\/\/(\/%5B\/%5D+)?\/(index.php\/)?(.*)wp-json(\/.*|$)|\/refer\/|\/go\/|\/recommend\/|\/recommends\/","usesTrailingSlash":"1","imageExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php","fileExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php|html|htm","siteUrl":"https:\/\/www.telugu360.com","onHoverDelay":"100","rateThrottle":"3"};
+/* ]]> */
+   </script>
+   <script id="rocket-preload-links-js-after" type="text/javascript">
+    /* <![CDATA[ */
+(function() {
+"use strict";var r="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},e=function(){function i(e,t){for(var n=0;n<t.length;n++){var i=t[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(e,i.key,i)}}return function(e,t,n){return t&&i(e.prototype,t),n&&i(e,n),e}}();function i(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}var t=function(){function n(e,t){i(this,n),this.browser=e,this.config=t,this.options=this.browser.options,this.prefetched=new Set,this.eventTime=null,this.threshold=1111,this.numOnHover=0}return e(n,[{key:"init",value:function(){!this.browser.supportsLinkPrefetch()||this.browser.isDataSaverModeOn()||this.browser.isSlowConnection()||(this.regex={excludeUris:RegExp(this.config.excludeUris,"i"),images:RegExp(".("+this.config.imageExt+")$","i"),fileExt:RegExp(".("+this.config.fileExt+")$","i")},this._initListeners(this))}},{key:"_initListeners",value:function(e){-1<this.config.onHoverDelay&&document.addEventListener("mouseover",e.listener.bind(e),e.listenerOptions),document.addEventListener("mousedown",e.listener.bind(e),e.listenerOptions),document.addEventListener("touchstart",e.listener.bind(e),e.listenerOptions)}},{key:"listener",value:function(e){var t=e.target.closest("a"),n=this._prepareUrl(t);if(null!==n)switch(e.type){case"mousedown":case"touchstart":this._addPrefetchLink(n);break;case"mouseover":this._earlyPrefetch(t,n,"mouseout")}}},{key:"_earlyPrefetch",value:function(t,e,n){var i=this,r=setTimeout(function(){if(r=null,0===i.numOnHover)setTimeout(function(){return i.numOnHover=0},1e3);else if(i.numOnHover>i.config.rateThrottle)return;i.numOnHover++,i._addPrefetchLink(e)},this.config.onHoverDelay);t.addEventListener(n,function e(){t.removeEventListener(n,e,{passive:!0}),null!==r&&(clearTimeout(r),r=null)},{passive:!0})}},{key:"_addPrefetchLink",value:function(i){return this.prefetched.add(i.href),new Promise(function(e,t){var n=document.createElement("link");n.rel="prefetch",n.href=i.href,n.onload=e,n.onerror=t,document.head.appendChild(n)}).catch(function(){})}},{key:"_prepareUrl",value:function(e){if(null===e||"object"!==(void 0===e?"undefined":r(e))||!1 in e||-1===["http:","https:"].indexOf(e.protocol))return null;var t=e.href.substring(0,this.config.siteUrl.length),n=this._getPathname(e.href,t),i={original:e.href,protocol:e.protocol,origin:t,pathname:n,href:t+n};return this._isLinkOk(i)?i:null}},{key:"_getPathname",value:function(e,t){var n=t?e.substring(this.config.siteUrl.length):e;return n.startsWith("/")||(n="/"+n),this._shouldAddTrailingSlash(n)?n+"/":n}},{key:"_shouldAddTrailingSlash",value:function(e){return this.config.usesTrailingSlash&&!e.endsWith("/")&&!this.regex.fileExt.test(e)}},{key:"_isLinkOk",value:function(e){return null!==e&&"object"===(void 0===e?"undefined":r(e))&&(!this.prefetched.has(e.href)&&e.origin===this.config.siteUrl&&-1===e.href.indexOf("?")&&-1===e.href.indexOf("#")&&!this.regex.excludeUris.test(e.href)&&!this.regex.images.test(e.href))}}],[{key:"run",value:function(){"undefined"!=typeof RocketPreloadLinksConfig&&new n(new RocketBrowserCompatibilityChecker({capture:!0,passive:!0}),RocketPreloadLinksConfig).init()}}]),n}();t.run();
+}());
+/* ]]> */
+   </script>
+   <script id="unwp-slick-js-js" src="https://www.telugu360.com/wp-content/themes/telugu360/js/slick.min.js?ver=6.5.5" type="text/javascript">
+   </script>
+   <script id="unwp-nav-js" src="https://www.telugu360.com/wp-content/themes/telugu360/js/custom-nav.js?ver=6.5.5" type="text/javascript">
+   </script>
+   <script id="custom-js-js" src="https://www.telugu360.com/wp-content/themes/telugu360/js/custom.js?ver=6.5.5" type="text/javascript">
+   </script>
+   <script id="glider-js-js" src="https://unpkg.com/glider-js?ver=1.0" type="text/javascript">
+   </script>
+   <script id="heateor_sss_sharing_js-js-before" type="text/javascript">
+    /* <![CDATA[ */
+function heateorSssLoadEvent(e) {var t=window.onload;if (typeof window.onload!="function") {window.onload=e}else{window.onload=function() {t();e()}}};	var heateorSssSharingAjaxUrl = 'https://www.telugu360.com/wp-admin/admin-ajax.php', heateorSssCloseIconPath = 'https://www.telugu360.com/wp-content/plugins/sassy-social-share/public/../images/close.png', heateorSssPluginIconPath = 'https://www.telugu360.com/wp-content/plugins/sassy-social-share/public/../images/logo.png', heateorSssHorizontalSharingCountEnable = 0, heateorSssVerticalSharingCountEnable = 0, heateorSssSharingOffset = -10; var heateorSssMobileStickySharingEnabled = 0;var heateorSssCopyLinkMessage = "Link copied.";var heateorSssUrlCountFetched = [], heateorSssSharesText = 'Shares', heateorSssShareText = 'Share';function heateorSssPopup(e) {window.open(e,"popUpWindow","height=400,width=600,left=400,top=100,resizable,scrollbars,toolbar=0,personalbar=0,menubar=no,location=no,directories=no,status")}
+/* ]]> */
+   </script>
+   <script id="heateor_sss_sharing_js-js" src="https://www.telugu360.com/wp-content/plugins/sassy-social-share/public/js/sassy-social-share-public.js?ver=3.3.63" type="text/javascript">
+   </script>
+   <script defer="" id="googlesitekit-events-provider-contact-form-7-js" src="https://www.telugu360.com/wp-content/plugins/google-site-kit/dist/assets/js/googlesitekit-events-provider-contact-form-7-21cf1c445673c649970d.js" type="text/javascript">
+   </script>
+   <script id="wpadcenter-frontend-js-extra" type="text/javascript">
+    /* <![CDATA[ */
+var ajax_url = {"url":"https:\/\/www.telugu360.com\/wp-admin\/admin-ajax.php","security":"63431a9d6d"};
+var ajax_url = {"url":"https:\/\/www.telugu360.com\/wp-admin\/admin-ajax.php","security":"63431a9d6d"};
+/* ]]> */
+   </script>
+   <script id="wpadcenter-frontend-js" src="https://www.telugu360.com/wp-content/plugins/wpadcenter/public/js/wpadcenter-public.min.js?ver=2.5.6" type="text/javascript">
+   </script>
+   <script crossorigin="anonymous" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" referrerpolicy="no-referrer" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+   </script>
+   <script>
+    // for 3D box..
+jQuery(document).ready(function( $ ){
+  function animate() {
+    var tl = new TimelineMax({ repeat: 15, repeatDelay: 1.5 });
+    tl.add(scene1());
+    tl.add(scene2());
+    tl.add(scene3());
+    tl.add(scene4());
+    function scene1() {
+      tl.fromTo(
+        ".container-inner",
+        { rotationY: 0 },
+        { rotationY: -90, duration: 1.5 },
+        0
+      );
+    }
+    function scene2() {
+      tl.fromTo(
+        ".container-inner",
+        { rotationY: -90 },
+        { rotationY: -180, duration: 1.5, delay: 3 },
+        0
+      );
+    }
+    function scene3() {
+      tl.fromTo(
+        ".container-inner",
+        { rotationY: -180 },
+        { rotationY: -270, duration: 1.5, delay: 6 },
+        0
+      );
+    }
+    function scene4() {
+      tl.fromTo(
+        ".container-inner",
+        { rotationY: -270 },
+        { rotationY: -360, duration: 1.5, delay: 9 },
+        0
+      );
+    }
+  }
+  $(".fa-window-close").click(function () {
+    $(this).parentsUntil(".box-container").remove();
+  });
+  setTimeout(animate, 1500);
+});
+
+
+
+
+ // add grab functionality on web stories   
+function initializeSlider() {
+  const slider = document.querySelector('.web-stories-list__carousel');
+  if (!slider) return;
+
+  let isDragging = false;
+  let startX;
+  let scrollStart;
+
+  // Handle mouse down event
+  slider.addEventListener('mousedown', (e) => {
+    isDragging = true;
+    slider.classList.add('active');
+    startX = e.pageX - slider.offsetLeft;
+    scrollStart = slider.scrollLeft;
+    // Prevent text selection while dragging
+    slider.style.userSelect = 'none';
+  });
+
+  // Handle mouse up and mouse leave events
+  const stopDragging = () => {
+    if (isDragging) {
+      isDragging = false;
+      slider.classList.remove('active');
+      slider.style.userSelect = '';
+    }
+  };
+
+  slider.addEventListener('mouseup', stopDragging);
+  slider.addEventListener('mouseleave', stopDragging);
+
+  // Handle mouse move event
+  slider.addEventListener('mousemove', (e) => {
+    if (!isDragging) return;
+    e.preventDefault();
+    const x = e.pageX - slider.offsetLeft;
+    const walk = (x - startX) * 2; // Adjust scrolling speed here
+    slider.scrollLeft = scrollStart - walk;
+  });
+
+  // Touch events for mobile devices
+  slider.addEventListener('touchstart', (e) => {
+    isDragging = true;
+    slider.classList.add('active');
+    startX = e.touches[0].pageX - slider.offsetLeft;
+    scrollStart = slider.scrollLeft;
+  });
+
+  slider.addEventListener('touchend', stopDragging);
+
+  slider.addEventListener('touchmove', (e) => {
+    if (!isDragging) return;
+    e.preventDefault();
+    const x = e.touches[0].pageX - slider.offsetLeft;
+    const walk = (x - startX) * 2; // Adjust scrolling speed here
+    slider.scrollLeft = scrollStart - walk;
+  });
+
+  // Optional: Implement snapping manually if needed
+  slider.addEventListener('scroll', () => {
+    // You can implement additional snapping logic here if CSS Scroll Snap is insufficient
+  });
+}
+
+document.addEventListener('DOMContentLoaded', initializeSlider);
+   </script>
+   <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var titles = document.querySelectorAll('.web-stories-sec .story-content-overlay__title');
+        titles.forEach(function(title) {
+            var text = title.textContent.trim();
+            var firstWord = text.split(' ')[0];
+            title.textContent = firstWord;
+        });
+    });
+   </script>
+   <script type="text/javascript">
+    // this is for header search bar
+document.addEventListener('DOMContentLoaded', function() {
+    var searchIcon = document.getElementById('search-icon');
+    var searchBar = document.getElementById('search-bar');
+
+    searchIcon.addEventListener('click', function() {
+        if (searchBar.classList.contains('hidden')) {
+            searchBar.classList.remove('hidden');
+            searchBar.querySelector('.search-field').focus();
+        } else {
+            searchBar.classList.add('hidden');
+        }
+    });
+
+    // Optional: close the search bar if user clicks outside of it
+    document.addEventListener('click', function(event) {
+        if (!searchContainer.contains(event.target)) {
+            searchBar.classList.add('hidden');
+        }
+    });
+});
+
+
+
+
+    $( window ).scroll(function() {
+
+        var height = $(window).scrollTop();
+
+        if(height >= 1) {
+            $('header').addClass('fixed-menu');
+        } else {
+            $('header').removeClass('fixed-menu');
+        }
+
+    });
+
+    // youtube home page
+$('.owl-carousel').owlCarousel({
+    loop: true,
+    nav: false, // This hides the navigation arrows
+    margin: 10,
+    responsiveClass: true,
+    responsive: {
+        0: {
+            items: 1,
+            nav: false // Navigation arrows are hidden here as well
+        },
+        600: {
+            items: 3,
+            nav: false // Navigation arrows are hidden here as well
+        },
+        1000: {
+            items: 4,
+            nav: false, // Navigation arrows are hidden here as well
+            loop: false
+        }
+    }
+});
+   </script>
+  </link>
+ </body>
+</html>
+<!-- This website is like a Rocket, isn't it? Performance optimized by WP Rocket. Learn more: https://wp-rocket.me - Debug: cached@1741624592 -->
