@@ -24,31 +24,49 @@ def extract_movie_review_links():
             link_tag = table.find('a', href=True, class_='side_link')
             if link_tag:
                 link = BASE_URL + '/' + link_tag['href']
-                links.append(link)
+                movie_name = link_tag.text.strip()
+                # Skip "ShareOnFB" entries
+                if movie_name.lower() != "shareonfb":
+                    links.append((movie_name, link))
+                    # Debug: Print the extracted link and movie name
+                    print(f"Extracted link: {link}")
+                    print(f"Movie name: {movie_name}")
         return links
     return []
 
 def extract_rating_andhraboxoffice(soup):
-    # Step 1: Find the <span> tag containing "Rating:"
-    rating_tag = soup.find('span', style='font-weight: bold;', string=lambda x: x and 'Rating:' in x)
-    
+    # Step 1: Find the <span> tag containing "Overall Movie Rating"
+    rating_tag = soup.find('span', style='font-family: Trebuchet MS;')
     if rating_tag:
-        # Step 2: Extract and clean the rating
-        rating_text = rating_tag.text.strip().replace("Rating: ", "")
-        return rating_text.split("/")[0]  # Extract only the number (e.g., 3.25)
-    # Return None if no rating is found
+        # Step 2: Extract the text and clean it
+        rating_text = rating_tag.text.strip()
+        if "Overall Movie Rating" in rating_text:
+            # Extract the rating value (e.g., "2.75 / 5")
+            rating_value = rating_text.split("Overall Movie Rating")[1].split(":")[1].strip().split("/")[0].strip()
+            # Debug: Print the extracted rating
+            print(f"Extracted rating: {rating_value}")
+            return rating_value
+    # Debug: Print if no rating is found
+    print("No rating found.")
     return None
 
 def scrape_movie_details(url):
     soup = get_soup(url)
     if soup:
-        # Extract the movie name from the URL or content
-        movie_name = url.split('=')[-1].replace('-', ' ').title()
+        # Extract the movie name
+        movie_name_tag = soup.find('a', class_='side_link')
+        if movie_name_tag:
+            movie_name = movie_name_tag.text.strip()
+        else:
+            movie_name = "Unknown Movie"
 
         # Extract the rating using the extract_rating_andhraboxoffice function
         rating = extract_rating_andhraboxoffice(soup)
         if not rating:
             rating = 'No Rating Found'
+
+        # Debug: Print the final extracted data
+        print(f"Final data: Movie Name = {movie_name}, Rating = {rating}, URL = {url}")
 
         return {
             'movie_name': movie_name,
