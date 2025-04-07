@@ -1,5 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
+import re
 
 BASE_URL = 'https://www.tupaki.com'
 
@@ -15,17 +16,35 @@ def get_soup(url):
         return None
 
 def extract_movie_review_links():
-    soup = get_soup(f'{BASE_URL}/movies-reviews')
-    if soup:
-        links = []
+    links = []
+    page = 1
+    
+    while True:
+        url = f'{BASE_URL}/movies-reviews/{page}' if page > 1 else f'{BASE_URL}/movies-reviews'
+        print(f"Scraping page {page}: {url}")
+        soup = get_soup(url)
+        
+        if not soup:
+            break
+
+        new_links = []
         entertainment_scroll = soup.find_all('div', class_='entertainment-scroll')
         for scroll in entertainment_scroll:
             link_tag = scroll.find('a', href=True)
             if link_tag:
                 link = BASE_URL + link_tag['href']
-                links.append(link)
-        return links
-    return []
+                new_links.append(link)
+
+        if not new_links:
+            print("No more review links found. Ending pagination.")
+            break
+
+        links.extend(new_links)
+        page += 1
+
+    print(f"\nTotal {len(links)} movie review links extracted.")
+    return links
+
 
 def extract_movie_name(soup):
     """ Extracts movie name from the page, checking multiple possible locations. """
@@ -45,19 +64,22 @@ def extract_movie_name(soup):
 
 def extract_rating(soup):
     # Find all <p> tags inside the div
-    p_tags = soup.find_all('p')
-    
-    if p_tags:
-        # Get the last <p> tag (which contains the rating)
-        last_p = p_tags[-1]
-        
-        # Extract text while ignoring the <font> tag
-        rating_text = ''.join(last_p.find_all(text=True, recursive=False)).strip()
-        
-        # Extract the numeric rating
-        rating = rating_text.split('రేటింగ్-')[-1].strip() if 'రేటింగ్-' in rating_text else "N/A"
-        
-        return rating
+    rating_tag = soup.find(
+        lambda tag: tag.name in ["div", "p"] and re.search(
+            r"^(రేటింగ్-)", 
+            tag.get_text(strip=True), 
+            re.IGNORECASE
+        )
+    )
+    if rating_tag:
+        # Extract the text and clean it
+        rating_text = rating_tag.text.strip()
+        match = re.search(r'\d+(\.\d+)?', rating_text)
+        if match:
+            rating_value = match.group()
+            return rating_value
+        else:
+            print("No rating number found.")
     
     return "N/A" 
 
@@ -68,8 +90,8 @@ def scrape_movie_details(url):
         movie_name = extract_movie_name(soup)
         rating = extract_rating(soup)
         return {
-            'movie_name': movie_name,
-            'rating': rating,
-            'url': url
+            'MovieName': movie_name,
+            'Source': url,
+            'Rating': rating
         }
     return None

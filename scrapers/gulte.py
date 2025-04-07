@@ -1,5 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
+import time
 
 BASE_URL = 'https://www.gulte.com'
 
@@ -15,28 +16,43 @@ def get_soup(url):
         return None
 
 def extract_movie_review_links():
-    soup = get_soup(f'{BASE_URL}/moviereviews')
-    if soup:
-        links = []
-        # Find all review links in the post-thumbnail
+    page = 1
+    all_links = []
+
+    while True:
+        url = f'{BASE_URL}/moviereviews/page/{page}/'
+        print(f"Fetching: {url}")
+        soup = get_soup(url)
+
+        if not soup:
+            print("No content found. Ending.")
+            break
+
         post_thumbnails = soup.find_all('div', class_='post-thumbnail')
+        if not post_thumbnails:
+            print("No more reviews found. Stopping pagination.")
+            break
+
+        page_links = []
         for thumbnail in post_thumbnails:
             link_tag = thumbnail.find('a', href=True)
             if link_tag:
-                link = link_tag['href']
-                links.append(link)
-        return links
-    return []
+                page_links.append(link_tag['href'])
+
+        print(f"Page {page}: Found {len(page_links)} links.")
+        all_links.extend(page_links)
+        page += 1
+        time.sleep(1)
+
+    return all_links
+
 
 def extract_rating_gulte(soup):
     # Step 1: Find the <strong> tag containing "Rating:"
-    rating_tag = soup.find('strong', string=lambda x: x and 'Rating:' in x)
-    
+    rating_tag = soup.find('strong', string=lambda x: x and 'Rating' in x)
     if rating_tag:
-        # Step 2: Extract and clean the rating
-        rating_text = rating_tag.text.strip().replace("Rating: ", "")
-        return rating_text.split("/")[0]  # Extract only the number (e.g., 2.75)
-    # Return None if no rating is found
+        rating_text = rating_tag.text.split(" ")[-1].strip()  
+        return rating_text.split("/")[0]
     return None
 
 def scrape_movie_details(url):

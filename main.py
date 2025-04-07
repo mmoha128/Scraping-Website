@@ -8,122 +8,102 @@ engine = create_engine('sqlite:///movie_reviews.db')
 
 def scrape_telugu360():
     print("Scraping Telugu360...")
-    review_links = telugu360.extract_movie_links('https://www.telugu360.com/category/movies/telugu-movies-reviews/')
+    review_links = telugu360.extract_movie_links()
     print(f"Extracted {len(review_links)} movie review links: {review_links}")
 
     for link in review_links:
-        print(f"Scraping {link}...")
         data = telugu360.scrape_movie_details(link)
         if data:
-            print(f"Title: {data['MovieName']}")
-            print(f"Rating: {data['Rating']}")
-            print(f"Source: {data['Source']}")
+            save_to_database(data)
         else:
             print(f"Failed to scrape data from {link}")
-        time.sleep(2)  # Add a 2-second delay
+    
 
 def scrape_m9news():
     print("Scraping M9 News...")
     review_links = m9news.extract_movie_review_links()
     print(f"Extracted {len(review_links)} movie review links.")
 
-    # Print table header
-    print(f"{'|':<2} {'MovieName':<50} {'|':<2} {'Rating':<10} {'|':<2}")
-    print("|" + "-"*52 + "|" + "-"*12 + "|")
-
     for link in review_links:
         data = m9news.scrape_movie_details(link)
         if data:
-            # Print movie name and rating in table format
-            print(f"{'|':<2} {data['movie_name']:<50} {'|':<2} {data['rating']:<10} {'|':<2}")
-        time.sleep(2)  # Add a 2-second delay
+            save_to_database(data)
+        else:
+            print(f"Failed to scrape data from {link}")
 
 def scrape_123telugu():
     print("Scraping 123telugu...")
-    review_links = telugu123.extract_movie_links('https://www.123telugu.com/category/reviews')
+    review_links = telugu123.extract_movie_links()
     print(f"Extracted {len(review_links)} movie review links: {review_links}")
 
-    all_data = []
     for link in review_links:
-        print(f"Scraping {link}...")
         data = telugu123.scrape_movie_details(link)
         if data:
-            all_data.append(data)
-        time.sleep(2)  # Respect crawl-delay (adjust based on robots.txt)
-
-    # Convert to DataFrame
-    df = pd.DataFrame(all_data)
-    if not df.empty:
-        print(df)  # Check the scraped data
-        # Save to SQLite database
-        df.to_sql('movie_reviews', con=engine, if_exists='append', index=False)
-        print("Data saved to database!")
-    else:
-        print("No data scraped. Check the website structure or selectors.")
+            save_to_database(data)
+        else:
+            print(f"Failed to scrape data from {link}")
 
 def scrape_greatandhra():
     print("Scraping GreatAndhra...")
     review_links = greatandhra.extract_movie_review_links()
     print(f"Extracted {len(review_links)} movie review links: {review_links}")
 
-    # Print table header
-    print(f"{'|':<2} {'MovieName':<50} {'|':<2} {'Rating':<10} {'|':<2}")
-    print("|" + "-"*52 + "|" + "-"*12 + "|")
-
     for link in review_links:
         data = greatandhra.scrape_movie_details(link)
         if data:
-            # Print movie name and rating in table format
-            print(f"{'|':<2} {data['movie_name']:<50} {'|':<2} {data['rating']:<10} {'|':<2}")
-        time.sleep(2)  # Add a 2-second delay
+            save_to_database(data)
+        else:
+            print(f"Failed to scrape data from {link}")
+        
 
 def scrape_gulte():
     print("Scraping Gulte...")
     review_links = gulte.extract_movie_review_links()
     print(f"Extracted {len(review_links)} movie review links: {review_links}")
 
-    # Print table header
-    print(f"{'|':<2} {'MovieName':<50} {'|':<2} {'Rating':<10} {'|':<2}")
-    print("|" + "-"*52 + "|" + "-"*12 + "|")
-
     for link in review_links:
         data = gulte.scrape_movie_details(link)
         if data:
-            # Print movie name and rating in table format
-            print(f"{'|':<2} {data['movie_name']:<50} {'|':<2} {data['rating']:<10} {'|':<2}")
-        time.sleep(2)  # Add a 2-second delay
+            save_to_database(data)
+        else:
+            print(f"Failed to scrape data from {link}")
+            
+            
 
+### This website has the issue of inconsistent rating format 
 def scrape_andhraboxoffice():
     print("Scraping AndhraBoxOffice...")
     review_links = andhraboxoffice.extract_movie_review_links()
     print(f"Extracted {len(review_links)} movie review links: {review_links}")
 
-    # Print table header
-    print(f"{'|':<2} {'MovieName':<50} {'|':<2} {'Rating':<10} {'|':<2}")
-    print("|" + "-"*52 + "|" + "-"*12 + "|")
 
-    for link in review_links:
-        data = andhraboxoffice.scrape_movie_details(link)
+    for movieName,link in review_links:
+        data = andhraboxoffice.scrape_movie_details(movieName,link)
         if data:
-            # Print movie name and rating in table format
-            print(f"{'|':<2} {data['movie_name']:<50} {'|':<2} {data['rating']:<10} {'|':<2}")
-        time.sleep(2)  # Add a 2-second delay
+            save_to_database(data)
+        else:
+            print(f"Failed to scrape data from {link}")
 
 def scrape_tupaki():
     print("Scraping Tupaki...")
     review_links = tupaki.extract_movie_review_links()
     print(f"Extracted {len(review_links)} movie review links: {review_links}")
 
-    # Print table header
-    print(f"{'|':<2} {'MovieName':<50} {'|':<2} {'Rating':<10} {'|':<2}")
-    print("|" + "-"*52 + "|" + "-"*12 + "|")
-
     for link in review_links:
         data = tupaki.scrape_movie_details(link)
         if data:
-            # Print movie name and rating in table format
-            print(f"{'|':<2} {data['movie_name']:<50} {'|':<2} {data['rating']:<10} {'|':<2}")
-        time.sleep(2)  # Add a 2-second delay
+            save_to_database(data)
+        else:
+            print(f"Failed to scrape data from {link}")
+        
+        
+def save_to_database(data):
+    try:
+        df = pd.DataFrame([data]) 
+        df.to_sql('movie_reviews', con=engine, if_exists='append', index=False)
+        print(f"Saved: {data.get('MovieName', 'Unknown Title')}")
+    except Exception as e:
+        print(f"Failed to insert data into DB: {e}")
 
 def main():
     # Prompt the user to choose which website to scrape

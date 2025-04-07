@@ -1,5 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
+import time
 
 BASE_URL = 'https://telugu.greatandhra.com'
 
@@ -15,18 +16,37 @@ def get_soup(url):
         return None
 
 def extract_movie_review_links():
-    soup = get_soup(f'{BASE_URL}/movies/reviews')
-    if soup:
-        links = []
-        # Find all review links in the entry-title
+    page = 1
+    all_links = []
+
+    while True:
+        url = f'{BASE_URL}/movies/reviews/page/{page}/'
+        print(f"Fetching: {url}")
+        soup = get_soup(url)
+
+        if not soup:
+            print(f"Stopping at page {page}. No content.")
+            break
+
         entry_titles = soup.find_all('h2', class_='entry-title')
+        if not entry_titles:
+            print(f"No reviews found on page {page}. Ending pagination.")
+            break
+
+        page_links = []
         for title in entry_titles:
             link_tag = title.find('a', href=True)
             if link_tag:
                 link = link_tag['href']
-                links.append(link)
-        return links
-    return []
+                page_links.append(link)
+
+        print(f"Page {page}: Found {len(page_links)} links.")
+        all_links.extend(page_links)
+        page += 1
+        time.sleep(1)
+
+    return all_links
+
 
 def extract_rating_greatandhra(soup):
     # Step 1: Find the <span> tag with style="color: #ff0000;"
@@ -51,8 +71,8 @@ def scrape_movie_details(url):
             rating = 'No Rating Found'
 
         return {
-            'movie_name': movie_name,
-            'rating': rating,
-            'url': url
+            'MovieName': movie_name,
+            'Source': url,
+            'rating': rating
         }
     return None

@@ -1,5 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
+import time
 
 BASE_URL = 'https://www.m9.news'
 
@@ -15,22 +16,35 @@ def get_soup(url):
         return None
 
 def extract_movie_review_links():
-    soup = get_soup(f'{BASE_URL}/reviews/')
-    if soup:
-        links = []
-        # Find all archive items
+    page = 1
+    all_links = []
+
+    while True:
+        url = f'{BASE_URL}/reviews/page/{page}/'
+        print(f"Fetching: {url}")
+        soup = get_soup(url)
+        if not soup:
+            break
+
         archive_items = soup.find_all('div', class_='archive-item')
+        if not archive_items:
+            print("No archive items found on this page. Ending pagination.")
+            break
+
         for item in archive_items:
-            # Find the <a> tag inside the archive item
             link_tag = item.find('a', href=True)
             if link_tag:
                 link = link_tag['href']
-                # Ensure the link is absolute
                 if link.startswith('/'):
                     link = BASE_URL + link
-                links.append(link)
-        return links
-    return []
+                all_links.append(link)
+
+        print(f"Page {page}: Found {len(archive_items)} links.")
+        page += 1
+        time.sleep(1)
+
+    return all_links
+
 
 def scrape_movie_details(url):
     soup = get_soup(url)
@@ -49,8 +63,8 @@ def scrape_movie_details(url):
             rating = 'No Rating Found'
 
         return {
-            'movie_name': movie_name,
-            'rating': rating,
-            'url': url
+            'MovieName': movie_name,
+            'Source': url,
+            'Rating': rating,
         }
     return None
